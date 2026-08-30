@@ -1,0 +1,508 @@
+{
+  "collections": [
+    {
+      "slug": "weddings",
+      "title": "Weddings",
+      "blurb": "Muhurtham to mangalsutra — the whole day, told the way it felt.",
+      "icon": "rings",
+      "photos": [
+        {
+          "src": "/gallery/weddings/1-1600.webp",
+          "srcset": "/gallery/weddings/1-800.webp 800w, /gallery/weddings/1-1600.webp 1600w",
+          "width": 1280,
+          "height": 1280,
+          "ratio": 1,
+          "blur": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAADwBACdASoUABQAPu1srlIppaQiqAgBMB2JbACdMs8qm0fU78jRyja/VpyuuED53aAA/U9FkF1iQ9cuZ5JOMRCP8HWsLxa7dowxNgZtrAGwYFUpTkGyyETlNv86rHvAjOJLMAEHaUe1aa+Ab/QKVlVOCDQHQdDGeQuvL0GQ+zHXlHezbGNfI+Q44QysH0PvyF/VhuwyzhfqS+vYo03xCXlDjvfiyLFksS4JzmM1WzNH0STB/d96xWbtfxJZXwd9yzIoJE5x+2nUIW3sQG65zsj6C42TUnLiMgPKGiA1d0liX5jw/9ec5ySlC+PtKdIAAAA="
+        },
+        {
+          "src": "/gallery/weddings/2-1600.webp",
+          "srcset": "/gallery/weddings/2-800.webp 800w, /gallery/weddings/2-1600.webp 1600w",
+          "width": 2287,
+          "height": 2500,
+          "ratio": 0.9148,
+          "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADwBQCdASoUABYAPu1qrVCppaQiqAqpMB2JbACdMtwggANnRBnbg51KdvRsdZs4LYZGLvRt4rBKAAD+3gd9/+FNHyKd6MzPg7Do6IfNK2GvUilzVCvroENAgMVDExh4itFCO12u71zo7ulh4oUBUTE8t45o13GKLB0EgpayBvgO8kkRvemFnkDhFuLiSyeY4Z2crZD6TM4gm4bxjV3xcyKAs1zD/ikQXyE89fKljPoSmowLFMwQlGyyrlR+/9G9Du1HzCYVBs4SWSfeCH7NJgz0usiGAA=="
+        },
+        {
+          "src": "/gallery/weddings/3-1600.webp",
+          "srcset": "/gallery/weddings/3-800.webp 800w, /gallery/weddings/3-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAAAwBgCdASoUAB4APu1iqU2ppaOiMAgBMB2JbACdMuInYZJF1QG/7bYk0mFA1TJUEu96zmkBphLeqSngAPzbP5VR9OcK9T4wyNK017N8hipbZ8ky33Bz8NOwTRwxl7z0At54OhM5ZUzf/1WztGdfQgxHxp73C4uY46E22nByCPYdETf2MXuFPTI1yFuIuN/vojv/N0RIWW2dzVxzGuXjdZCYYstEWOPLq0XScpsPse2RmIqC4r5FV6qf8SbnfJ4EThBMl1FGe32EJ7GtUPmgERvE7WldAex9wM9X0B+nnCYM2m1FEIVDFfR1E2uQwd0csABtH5r452agAA=="
+        },
+        {
+          "src": "/gallery/weddings/4-1600.webp",
+          "srcset": "/gallery/weddings/4-800.webp 800w, /gallery/weddings/4-1600.webp 1600w",
+          "width": 1560,
+          "height": 2500,
+          "ratio": 0.624,
+          "blur": "data:image/webp;base64,UklGRggBAABXRUJQVlA4IPwAAACwBgCdASoUACAAPu1ur1IppiQiqAgBMB2JbACdMoR0hoK8BLIG8zG0BVMg6P0/VL6IM37REHeC3aOeE8/CgAD+93icYLs3cPUYGoXBddBA8Iag8CK5bQVsMnxB5bs1lHjT4tyX9eIgLpepLjAe4R3FQEGlTc2b2uWAZMpK54wbYW29ctv7lPo1TVPAd+KfJHmw7xx/vFfQLheO33KB/YXEW1X5gVZvueOLmfGzpCs6eu0tqFENWFNQB7gyJ1HvdAswy1RmTAqsLaQT+qBHkYs8PuQXWZkKk1d2fpLNkI0w2pnQGEdQb8lr178YYlTp85e89qG1GJyRsuW8AAA="
+        },
+        {
+          "src": "/gallery/weddings/5-1600.webp",
+          "srcset": "/gallery/weddings/5-800.webp 800w, /gallery/weddings/5-1600.webp 1600w",
+          "width": 1470,
+          "height": 2500,
+          "ratio": 0.588,
+          "blur": "data:image/webp;base64,UklGRmQBAABXRUJQVlA4IFgBAAAwCACdASoUACIAPu1mqlAppSOiqqoBMB2JagCxH2PBsQ0vM3ydfgaX1oULfwHjuXl0rzGTsrYpV24d39cmDCDHlGW+ctL8S9lQAAD+5l8WhveiecJjxhmQYRfWetJ1hKJ3KdPB1HdeOKt7vOTTIbqdoHZ8SljRDs/W5Zm0bBRKuI/G9VYUk7UL+TYk/lf/VZioY83OWAbRrSQ5q4ZBcUMXEEA3bCLpiFSbbvUPsVYYP+AmJbTgabkGQRBFFTTxaGmwjKYxjQiVy21lUBsJ5NVXlfcOnd+b2St4ouCQp0SdApa2baMbOle9jw4EIh7L7xOuwHqlt+hWKTN21YArsueTZLc8Wy2WGDoRjeCc25o7Yd/fpvswV4bXEHa2p1LTwkPhOf5SwPTxcrJbrhVwCQtsYNxM0zmQ5OJrxNAgGUd5KgV3MxxZ1NiFXR7vdfAKvaYSNJABktKAAA=="
+        },
+        {
+          "src": "/gallery/weddings/6-1600.webp",
+          "srcset": "/gallery/weddings/6-800.webp 800w, /gallery/weddings/6-1600.webp 1600w",
+          "width": 1470,
+          "height": 2500,
+          "ratio": 0.588,
+          "blur": "data:image/webp;base64,UklGRhQBAABXRUJQVlA4IAgBAACQBwCdASoUACIAPu1qp0+ppiMiKrgN+TAdiWQAtRs8f5rKx0kY0KpDuzdLKY2XNitQ1/A9rx8ZwFoRgYavo4BPE8hKWAAA/svL6CZXN26nl86JFEI/6QJB5WMgsgpAAF3iKdb0+MwMIIQETis7tv7J4lQeQJdS7eePMZZn4phO5P8NciQ3MtJAt0sJqjHDgOBMiMo6ZtC4BQJBpyU+MqRt3wzLA5rJeU8g4PtMnTe2QYgRKdsI+oAYxqGHpqSS2XpXR+x0K4iRxqtV3paOiwlltVaLq4Hu9ZpBusoRJBsbQwcYvqJXxt/tepivTUD0JOPQA5mYI0U8aDF4yx1mYNYeqLppr0QAAAA="
+        }
+      ]
+    },
+    {
+      "slug": "pre-wedding",
+      "title": "Pre-Wedding",
+      "blurb": "Coastlines, courthouses and golden hour before the big day.",
+      "icon": "heart",
+      "photos": [
+        {
+          "src": "/gallery/pre-wedding/1-1600.webp",
+          "srcset": "/gallery/pre-wedding/1-800.webp 800w, /gallery/pre-wedding/1-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JagCdMoMh1EwUeIdi8J1eobahpQAA/rtT4Vhwejnod3TdE+7/Lxmz5gvhl+ZTdsUEipvZgsmWM2vFqWc0guhiH0hry1es3dAOPWC6VM/MDrdRsr2KOrQRubA8BglqowlPeZjKtj98/1cVXjkYQrL0BOz/wSQAAAA="
+        },
+        {
+          "src": "/gallery/pre-wedding/2-1600.webp",
+          "srcset": "/gallery/pre-wedding/2-800.webp 800w, /gallery/pre-wedding/2-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAADQBQCdASoUAB4APu1gp04ppSMiMBgMATAdiWQAnTOFBnLLQVmULREmmcbsolvLGlXJI/G67+UAAP70Tk2g/w8c5euRN1/+Uq42hPvfTkblSp3aedbHkdotYGwWCWANu+Sd4MKhnsTnslRoRib1q4iEL/X3TOQMEuCYOX+CaonViM657GTKWcrpuVQwHD+Nh3UH+N2PPxvSYruFcM1RwqJ1AO6KtHB2P6ZZ3n1K8A0lkeAiDLFnfnrI5ClTnhuZY7kQAAAA"
+        },
+        {
+          "src": "/gallery/pre-wedding/3-1600.webp",
+          "srcset": "/gallery/pre-wedding/3-800.webp 800w, /gallery/pre-wedding/3-1600.webp 1600w",
+          "width": 1766,
+          "height": 2500,
+          "ratio": 0.7064,
+          "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAABQBQCdASoUABwAPu1mqk+ppSOiMBgIATAdiWQAv+8wiIJn1UNXOHm9yRds9wtJdE0HGqAA+4pM6bdl5QzUAVnGkDHpiTtVg63Q6hjxP/EneE+qwb9xWBVp7+KVNG+Xrelrb0FZlwDK6vcUPSRWtzlGQoe8fGQ/FAIHGxKxd5SNbDIFVKmBw0wjZtyRBahMboMLenAHgjdVdIT2GiYe0Slvp6SzKRYyThZQ+EDOu6dxS2lmgJ+8wB+5rY6ZwvBdWTUAAA=="
+        },
+        {
+          "src": "/gallery/pre-wedding/4-1600.webp",
+          "srcset": "/gallery/pre-wedding/4-800.webp 800w, /gallery/pre-wedding/4-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAADwBACdASoUAB4APu1sqk6ppqOiMBgIATAdiUAABY8XwfH6PgoW++m2izhhG8Rf7MwA/rpuTCdVp5n8he0X6WwejH2e7ZnGpvO2oGhN9rnjCrZWq7DolUeuUm8SePvJcsWLlyjyC5GlQDPlOm0AyuB6J0if50tYPcuT3/GzsHZ3AbL042yhWQ1/2MRNskg7TmLK90SbSOuaqffx2oXmeJv7E9vP94DxqEcRATbkVpTm8uKvk1UYuqrqj7AWk4JL5jDd+MJ4uJWIbAmvbAAAAA=="
+        },
+        {
+          "src": "/gallery/pre-wedding/5-1600.webp",
+          "srcset": "/gallery/pre-wedding/5-800.webp 800w, /gallery/pre-wedding/5-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JaACsACBjWma+UYYPaAD+RjcS3wa/3202d56f6n2Rf+c4wf0rqQ2CbrRAMNuVa+aw8tP6cnOfICSfkqyvUE3BPSWgD3OgbN4V3DV1GMDMvMZjB3QfB+RejMG1/epSigjL5hnCHDeEahrbL4uTbAAA"
+        },
+        {
+          "src": "/gallery/pre-wedding/6-1600.webp",
+          "srcset": "/gallery/pre-wedding/6-800.webp 800w, /gallery/pre-wedding/6-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACQBQCdASoUAB4APu1mqk2ppaQiMAgBMB2JZAC7ABl3rzfzdrgnsErbD/vNM8DQlHnilcwSAAD+o3US1c0z8haV9GT950gc7XevqVYyMed5OwslBWHZXRaE/3enjc8o1ODdtaTz0yRn/85MeIoof+3KmFF3iAT9zp51TVRZ52xQj0PlVzuyFvWXlzJ8IbYxgn5YyDUuaU//FYPZn16u04zk+gJugVCqcnQI0AtCv0N87VcjQZPQhBTV7Q0QAA=="
+        }
+      ]
+    },
+    {
+      "slug": "housewarmings",
+      "title": "Housewarmings",
+      "blurb": "Gruhapravesam — first lamp, first meal, first memory.",
+      "icon": "home",
+      "photos": [
+        {
+          "src": "/gallery/housewarmings/1-1600.webp",
+          "srcset": "/gallery/housewarmings/1-800.webp 800w, /gallery/housewarmings/1-1600.webp 1600w",
+          "width": 2500,
+          "height": 1618,
+          "ratio": 1.5451,
+          "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JYgC7ABmBW6LScIbfZmyrQAD+7NDZ9BPST19QxqqdBcuHfbayQ1tnZEC+2OQv5DRvRYz83xvf4xtKCEZ8GMOpzT3wivLwGbdoYlY+ar2lQ2Vdv5EdhyQbrtcfIlCFEegIAA=="
+        },
+        {
+          "src": "/gallery/housewarmings/2-1600.webp",
+          "srcset": "/gallery/housewarmings/2-800.webp 800w, /gallery/housewarmings/2-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAACwBgCdASoUAB4APu1mq0+ppSOiMBgIATAdiWwArDKDLsCMc/+pY/nsqCkqoMfLBl6ZEqsyeH32829grciDgADOOwH6EdWju6wLP2ia4A1tSV6gWW6h4H4M5et8iZovjGzIr8/00Ao/hcjWSBo8kuVU5nbS1+2LKf3dFhM8LEKBs9vBvk/Hf4y37HTCL8PwbwvHUyk0EM12KB88SGKTG06BkPTvZUj3mDhBO8zG9yZ864wSh+ONhaE8ZjHwhWzCyNJzN4kzLySwsx31ULeBqVW/2PatFVtEyYffqvYaOjrtUNhEnCk/36vKJEfzpOts8tyoo3SDLMSA07jbkfQ3dBl5BlC/jNKU21B+EUe9B00+y7wA"
+        },
+        {
+          "src": "/gallery/housewarmings/3-1600.webp",
+          "srcset": "/gallery/housewarmings/3-800.webp 800w, /gallery/housewarmings/3-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAAAwBgCdASoUAB4APu1epk2ppKMiMAgBMB2JbACdMuuu0aHVKyesEMPErLvNTHB5svSF31dwW6Rc2SxYAP4uRz9UkH5NsY8iAd9CBdfGH+9rpHJLrk2FHzi9RfdJUP4WADi6LvhWXwo2ZqPW+1DOrlcyxOsd4VZ10tIprqdLM0o2wBPTZPCfexveovoJNyGT9NNU4W9Skq8pk45019QKHGajn96I06udGgS9ZaIbSF4QBfvUhCRxIVt2qTtQILamGBdMxagcjTzUqTa480pp+gbGXRKLoHP/jBiVGO2y9fgmZ0OJi11K/T77kE7Vxw1XfrHPAAAA"
+        },
+        {
+          "src": "/gallery/housewarmings/4-1600.webp",
+          "srcset": "/gallery/housewarmings/4-800.webp 800w, /gallery/housewarmings/4-1600.webp 1600w",
+          "width": 1716,
+          "height": 2500,
+          "ratio": 0.6864,
+          "blur": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAADQBQCdASoUAB0APu1kqE2ppaOiMAgBMB2JbACxHt4EGpG59EBUCcjEo5h06Ct2hEZULMZg/5wAAOFRiCH+xuJd4NYGOsgfvLOzoaqfki1gKr6o9L5v6U86Y9W3mvNOXnpH89wC23t9JOZO2O6XhehJKm8Vj35d9jmTi6DZ62ld5OCzGspfHvk4kl4u1widnzK15JUCsEeh9V/Eu4nUzpzQwLOtlQz37FcFzD7BYfVTdyAngyCxqn/2eBoXr+UoGcTX6/vEr3FoL4N35qBtXOCqiAB0sqpevt8bXW139m0mG+jFdGXysKtkEuxZ27bK2eSBDGHqAAA="
+        },
+        {
+          "src": "/gallery/housewarmings/5-1600.webp",
+          "srcset": "/gallery/housewarmings/5-800.webp 800w, /gallery/housewarmings/5-1600.webp 1600w",
+          "width": 1758,
+          "height": 2500,
+          "ratio": 0.7032,
+          "blur": "data:image/webp;base64,UklGRigBAABXRUJQVlA4IBwBAACQBgCdASoUABwAPu1ip02ppaOiMAgBMB2JbACdMoR/gNk5/i2hmNVnstvt0aY/0K9RFMyoDhL5aO0LdTL6AP7Nq3j3DZOeW6DgQ/tbPWLlJjjBMvL5xTuZkpk3Geaf0G25904C5BfNm6iAc0KY88+/TE+AA+UwY8q0eRDnOB5UoIrRfCdIyH2RmP3sYjoHI+AQ8QHPtDzZxGOgOSlLofaHBLSorbQr3vZY2PaBc1j55CJ5gzQ0oYber2XvOviVs/bZ3sfybBz9M18WZzYU09YbBLtpRnBXA8EPRpKDm4l3ua7Gz4j+NJCwdEzBTyzxO1eNV5XoMu2FJW3px9CvZ53X7z25+HQSUgoy9APWn0W8LgYWtQp1/Ud4tEAAAA=="
+        },
+        {
+          "src": "/gallery/housewarmings/6-1600.webp",
+          "srcset": "/gallery/housewarmings/6-800.webp 800w, /gallery/housewarmings/6-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdLwABe7h070319srucFAA/skXnq1bPHHXulBeWqcj4Z5Yi0Q73sDPPGjxH0rRGS4qzmqhmFWT1EQVoM9oYaLuQY24UEtOKL9efnAVKXIIaj4JughDqRrPTBdxlGsvdvItyfwAAA=="
+        }
+      ]
+    },
+    {
+      "slug": "seemantham",
+      "title": "Seemantham",
+      "blurb": "Baby showers and bump portraits, glowing and unhurried.",
+      "icon": "lotus",
+      "photos": [
+        {
+          "src": "/gallery/seemantham/1-1600.webp",
+          "srcset": "/gallery/seemantham/1-800.webp 800w, /gallery/seemantham/1-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAAAQBgCdASoUAB4APu1sq1EppaOiqAqpMB2JbACdM2QluST9+jog9pMTVEWUZ4nCR4h+Jejl1PPXLAAA/vU8ba3K0+tFLY3KxrI7k+IQD0DDgouGNxrx4xu6/lPfv9T0TIc/M+/opIvVLS+XkQvaJ6I1lyWDyqXUL65Y88r8aeSqyoltrYHqvXOakT9Np60y1ntVabaxh1EysUYyiAFtp6oO6xz7JYiBQsJ5rWihfGEQ7j8/JyMCPTg/GO/4MUO4rkr3HIDUMINqhgtHSr6iF8PsgAA="
+        },
+        {
+          "src": "/gallery/seemantham/2-1600.webp",
+          "srcset": "/gallery/seemantham/2-800.webp 800w, /gallery/seemantham/2-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRkABAABXRUJQVlA4IDQBAABQBwCdASoUAB4APu1iqE2ppaOiMAgBMB2JbACdMoSBCP2y+N3aDPn4BbMbt+85Y+Xve9sNJAF8bZo/DptoNFYnHrkAAP7fSWgcwqD3M0RThP4Rf3LXpzsknXb2tTqJSbDD0G3/fAu0Bv2pLrnUSQkAjA011bnRK16UzHzMjTCpoL/QbgypRF539tnJZAUj/8aH8LwoB+KjPRqk4J9Jsb/acF9ERKdNJ/2nDSOIf/GSlR9U4+m/zT/8euAiek8E0A8DSZUDvmZsHDWBck+XlieE/HqUx8xT0NunSkEa+MFUq4zLAzh9F37h17QSd0BdukCVA5Dd5QZNjBRjRe1Pl9F8pQqCQyc2rmQE5TQ6i0gjIJxYpHaD6tFDeL3wm3vN/kUTsZTZMfPafdVCVBXm5Dnnbs0AAA=="
+        },
+        {
+          "src": "/gallery/seemantham/3-1600.webp",
+          "srcset": "/gallery/seemantham/3-800.webp 800w, /gallery/seemantham/3-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUAA0APu1iqU2ppaQiMAgBMB2JbACdMoADUF8kAe2ub8cH74coAP7IvcfB3GpvP2CaT89pcQJpWL12JwiJcGZ5wOjwQ+VxbRhqdCYdfjf4NzsWVhhHjn3jeykPvhPZ4/f+l4PqrFZW32umu2fvtZaQTaaC0AAA"
+        },
+        {
+          "src": "/gallery/seemantham/4-1600.webp",
+          "srcset": "/gallery/seemantham/4-800.webp 800w, /gallery/seemantham/4-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRggBAABXRUJQVlA4IPwAAADwBQCdASoUAB4APu1qr1AppaSiqAqpMB2JbAC1GoAvXbPpJsV1RtWczt8w38A0LmKav3rl/jFTIAD+7U8SO6ndo2C59qBMTnYpK8UTx6ZrSQk3tWPZm3AOhHCKfBNzx96ynBLdstU9gGRf/uOTw5ycQIMobaQ8ezYHG7cOVwWwtK4tf38rYL+lDehtq4Mm+M9MAq4/QpaaqePpeiscudxOYqI/Uxiw3ReXAi3ZfIHx5SEcf7nJ8Eut2ZtIqQk43SqBvvBBz7YqxwFplCLZiNacL53HZvLbDmZNIYInK6m3OPuVbANIXmV7n5sfGHUZwR4JIKWKGfliQhuKIAA="
+        },
+        {
+          "src": "/gallery/seemantham/5-1600.webp",
+          "srcset": "/gallery/seemantham/5-800.webp 800w, /gallery/seemantham/5-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAACwBgCdASoUAB4APu1oq08ppiOiMBgIATAdiWwAnTKEf4DSdkCTA9/IvuZHzXlj9Q3WI3FLHqK2kpKqJ9zxsAD9xB5uOZxCnOTPOKfUNLrxc/cfinXSsf4NvjdQRkPwoFtmHMsKAl8Kz2OjX3hSnvoAmo+TTPp0PB+pfe0KuoAlvBEieZm+jVcWtk3WwrxgFLyEkOvqXk4dBXwFiBOrOICjP6wtEI5owD/G7RrIgJgYub0dayI0BNHCDrOaL8cxp1MHieOZfVR+sBovv2MLRFU+kxaWXljAFdGzS4Y41MrmR6eq+lvqFPKpORdTttDpH3m2Ayf2QyL4BqSbud0AAA=="
+        },
+        {
+          "src": "/gallery/seemantham/6-1600.webp",
+          "srcset": "/gallery/seemantham/6-800.webp 800w, /gallery/seemantham/6-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAAAQBgCdASoUAB4APu1kqU2ppaOiMAgBMB2JbAC1GoMqNn/Adgks1vol9xL6UjgD7Hs1TpSgqE+v0gAA/I+zWFPx1GSldaR9/ETWbLssZ6JcQsJKK4HzTo1PxeeiYJo9zfAeUvtNJRB/5L6G2evRO9TizgXUQkhkG0K2n+92AB//UwISAEWCtjV0oKUL7fVHGP582Ekvp21fpN5ojy9BZs8kF8QYNu5F83GVuKdit+QMIqVMFXaaFlBEiHyYGHqxQGGiwYEKdO+u95U62lqUwIXb88/vuzNzCV3dNcAjcqRxZD6ORssXhHlPXpS58EbDJAfWoAAA"
+        }
+      ]
+    },
+    {
+      "slug": "birthdays",
+      "title": "Birthdays",
+      "blurb": "Cake smashes, balloon arches and the faces in between.",
+      "icon": "cake",
+      "photos": [
+        {
+          "src": "/gallery/birthdays/1-1600.webp",
+          "srcset": "/gallery/birthdays/1-800.webp 800w, /gallery/birthdays/1-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRhQBAABXRUJQVlA4IAgBAABwBgCdASoUAB4APu1kqU2ppaQiMAgBMB2JbACdMoSCv6y4CZSS6ACbUaT0OwLdpWWwztbLRbd8laCKT9AA8bYVnSPWDXKThQsh/8mlo9dlhlGeSzFp7yln8J8bymRCUdkwrdgNzUOsOMQmPDCFuUYss4CyisezVSWf7a3fWqvVfd2MlqRFQdZl4YIMv4j7OmPvKciCYiM2ndbYc6GeU3mlgGtW18G7JWUvNVd6pyagJ4W4q79vf3wX4dbu8Kr2gj5SNfcOMTcgPFHeEuLrJW4G/Mtillfy1plqKiXRayncnweawnsxX+EBHipC+ZOaSwwJRab79pRMFm7bEMlHxwvmWoFJHB+AAAA="
+        },
+        {
+          "src": "/gallery/birthdays/2-1600.webp",
+          "srcset": "/gallery/birthdays/2-800.webp 800w, /gallery/birthdays/2-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdMoADS9NHkR988L64AAD+l2Tz5/HqLr5JZzkqNzhwGjcoh9phfiKyzr06coCgf9Dl6Pav04Tbg0jCz5vOjRvyrjDGusRxPlTrFZLA51K6YwJeG948fBSP9BkbK7ecbksquriLPQnOtelRRxbukG6l0CDLhV3OCG+zAAA="
+        },
+        {
+          "src": "/gallery/birthdays/3-1600.webp",
+          "srcset": "/gallery/birthdays/3-800.webp 800w, /gallery/birthdays/3-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdAB0/aEeIkZ7RTYAA26TNAOJHqYJ5KISS6QaOChKHopoB+7xPt9qgOYLKRIQecr6nz7HwBPojURfctsES3LlcMLa9L+MUoDlts2OCNRRkWqjFl/SLUM6gAA=="
+        },
+        {
+          "src": "/gallery/birthdays/4-1600.webp",
+          "srcset": "/gallery/birthdays/4-800.webp 800w, /gallery/birthdays/4-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAABQBQCdASoUAB4APu1mq0+ppaOiMBgIATAdiWoAvz2s0giF4B+4Aj69Qe0jrOhU1rQvEUAA/od4VrUpuFxEeeI010JSNPRx/0l2jUa6x/PQptB9e5fQmPEfO98rQrVdkd411KDLrP48ZZhNry8J2SbrGxEFRxoqMfW9a1GwE7XzEFwIJ1b8HlM3mfp4e6hm6oA2tbMDeAfaU0hG6ATxpO6EgDtar1XYc1fdbqN4e6fK8A4PYuOsgfP+jwjqMaR9p2DuynT0fe5s4AIcuGJjU79ZGfzTsffZE2xng+yztQtLSYaR39IBzPPy9aPEFmL0AAA="
+        },
+        {
+          "src": "/gallery/birthdays/5-1600.webp",
+          "srcset": "/gallery/birthdays/5-800.webp 800w, /gallery/birthdays/5-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdMoMYADKr4fPBAN6AAPk6+MXTywmjDPZcmxKiCByLChzBA/dr03ORTnlG9h5slgnErgmmo/XUnUFCX8vEaqUQa1HIL0u1x5x6SIomL8BLeUhuxPRKtsLR+ZO+fIxMkAusPGwFpxMSH6usX6EamCOxYR4JIKLgAA=="
+        },
+        {
+          "src": "/gallery/birthdays/6-1600.webp",
+          "srcset": "/gallery/birthdays/6-800.webp 800w, /gallery/birthdays/6-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAACQBQCdASoUAB4APu1sq08ppqOiMBgIATAdiUAWoQgolG40IYxizeyHfyoaEosZMKCUeWzr9AD+604mTSZrtgwVTQB1V6zIJ+CoGFzif5R3fXByMCdg3qSUuyuFC0YEZTHlIPnrvEHdjhy3nwyY8KDSig7vnyhtyOfHwehfY7s3lzsrUMnpiGYTxPqyQEnFX55SYDZB/BrW2pRjFpJAOrCrKeyjuHbQP3RRYwX6RaQpR0OUYZHwrCdd/Pp7LhkjttSXG2lWGA2BLXKBZGmdhYYZBFxWa64U1OViohLIt8Gq+tYQ9rO7ySSh6Lkic1oWG4rPyQAA"
+        }
+      ]
+    },
+    {
+      "slug": "half-saree",
+      "title": "Half Saree",
+      "blurb": "Langa voni ceremonies — colour, ritual and a little swagger.",
+      "icon": "sparkle",
+      "photos": [
+        {
+          "src": "/gallery/half-saree/1-1600.webp",
+          "srcset": "/gallery/half-saree/1-800.webp 800w, /gallery/half-saree/1-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdLwABZoX3NOrAEHuXwADhwbpNbk/PIKcBeF6kTlrHRem6xTxx9RFcqS/rw9OtuODW6fzo3vgKBIpzD50RSsFV7UibcbginqcDyHWldz5yQClAPtX+w3x4via6BlR3jMIeAAA="
+        },
+        {
+          "src": "/gallery/half-saree/2-1600.webp",
+          "srcset": "/gallery/half-saree/2-800.webp 800w, /gallery/half-saree/2-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAAAwBgCdASoUAB4APu1gpk2ppSMiMAgBMB2JbACdMoMfHcBtlOfoG8C4QBWs9f9IfQRc/X1I/lBeE1RgAM25jxtnbyXNoI6qQYd1eSarzqIHSZ+9dmRuEsCvw+Bv10P9CiDNxrJ541Uxiiir7wj3yTELqGX2MD/zmY0pNCAyj4JNNeKqleSgm1BVdIPJOj4sL3XxxEGc5WgyDpG5Yf8og162ta72zIUeY/ykxauzp8NZ+sCZjvul2AYhQSYUvV1VknbH2nzUr1DGdyr8uLeVrGVdemrcnT/4U81QmWMQNY35UupbX0H+zrxL24QpVWX87Fusfio5X45UjMPphuIFLHO4rsTgSIp1YUDUAAAA"
+        },
+        {
+          "src": "/gallery/half-saree/3-1600.webp",
+          "srcset": "/gallery/half-saree/3-800.webp 800w, /gallery/half-saree/3-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAAAQBgCdASoUAB4APu1gp02ppSMiMAgBMB2JbACdMtB/+dEAyiU6QG95VH2JgIH2EptX48MbmgTZCtgA/ppEnvIHoi8oEn3d1jzKXle8WPZJs9CI0Ve7a7ucLC7VtOBTnKBLKw4pXKaikR8PBBG+aC26nBWUAbp/7B5ny/oOWSyQccKJvGcuxHc5SVtl6yFbly0Z3fmjvo05B/WI+SGjuYrLe3QQlguv1YAUDEk7xaqog+A6XwqpdKxZHOYz/QRmhygoweBdjUqTU0XU5X4Z8FiXk/ZIhaT6ealETF+N/DTbnDH/47HPRlT8fMGmgAAA"
+        },
+        {
+          "src": "/gallery/half-saree/4-1600.webp",
+          "srcset": "/gallery/half-saree/4-800.webp 800w, /gallery/half-saree/4-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAAAQBQCdASoUAB4APu1qrlCppaQiqAqpMB2JZgCxG9SCz+tTEW/0ZECfRA9jIxnhxYUAAP7oQ2dO7jE175mkbH4EqDtKNimNwHjdDAbqkN1WKB1kt/Mwg+QWmZ92WgMjMgmAR39tHSKvY+/baDg874J7YX1R2uptPerOHiUfp2Mb6UZve7A9B57uLDPcLlrPXjkcGth1HUewjgoLIJYSauLhis0AFlrIIvi3zfyoH0pWtQAA"
+        },
+        {
+          "src": "/gallery/half-saree/5-1600.webp",
+          "srcset": "/gallery/half-saree/5-800.webp 800w, /gallery/half-saree/5-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAACQBQCdASoUAB4APu1qq08ppiOiMBgIATAdiWwAqPQzKaLAaczbR5toKLjBh442ZnR7omGMAAD+6/9Ev61FjDqTyQ3u963gX4Adrbx/EK7xWPzZ9lz7ZK2dQYQhSX8YHpgMTRZNGc/o7GYuLEZ2re0Mqg7CbR+fzxOPHJBTCwV3eLUczVRb/KzE4ADBuGw7KTgb2YUyo9Wdj8ZELAWdbh2J8ZdH56QbmISXIwqgl3YbtH4T51oSI3MStGwfsflGlfnMtz5uxKdJAVKsMY0UllUeeyUkaegA"
+        },
+        {
+          "src": "/gallery/half-saree/6-1600.webp",
+          "srcset": "/gallery/half-saree/6-800.webp 800w, /gallery/half-saree/6-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACQBQCdASoUAB4APuVgo02pJaMiMAwBIByJbACdAY0WtG68pLiMNeubRxXVfU1SrecxQRgAAAD8caTgzFodXTidzLPvhREfVRJTpEcuWcUpE3iNqYmlXugaU3nPgpC6U3vycEPCvwvp7TLdeRQQWeBesxINfm2GC7nxbMP9HcRdbuIhsnqJoAmCwpONKfslmbEqTMEe0Ba6O+7lRO+TPdDBWdsYlTtz/c8JlLSq/99X0EqzzeIS/dTMgsn3WvBxS2IzAg0ap6VL3nhMzMD6+Y98rVhhTz+QL8AAAA=="
+        }
+      ]
+    },
+    {
+      "slug": "graduations",
+      "title": "Graduations",
+      "blurb": "Years of work, one tassel, and the campus that carried you.",
+      "icon": "cap",
+      "photos": [
+        {
+          "src": "/gallery/graduations/1-1600.webp",
+          "srcset": "/gallery/graduations/1-800.webp 800w, /gallery/graduations/1-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JagCdLwG4Fb/gPOdLPjOJIL4XynUwAOHqRO2Ja1DIThRynQM/uiTT5U5lSI2bHoFzS5PXUhgBbaAiQNm2LmwZOzN5rqBEiD5WRZaH47NG+toOKGQzcfjXm9cIrQMjfkNWvZUtemDywUPaRM58E9GkN3aMgP9jsSuoAA=="
+        },
+        {
+          "src": "/gallery/graduations/2-1600.webp",
+          "srcset": "/gallery/graduations/2-800.webp 800w, /gallery/graduations/2-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4ICABAABwBgCdASoUAB4APu1mqU2ppaQiMAgBMB2JbACdL8KeBsnjgA1wXBYxQCLaGI23BsHzA9INYDe01gQAZIAA+Spsneg+vuZHt0lesOc8dKdPObdESZK3M/skyHKj6nQsOtft85vH7V4LypkikjzdmlaAQ+NUMu+izaT3Zx5bbu93RjHX46xdnL8fZsp5toYxDSvCtrygOtjXhGiX3AD0RxmYOL6hflM5QojrY4vvIttT3Wr7qan+3oSRmNPpympzQ8dDHgPHthNIP66LEQtJ7XNN2tLY37te1uVvneW5l94h03IcV45Tsr7MC5+IAKOqmmKOvKT3dyAM4tiup6srTIwpzJTkd5cEZjZdX6FSaw/a7lKzKrbnZ8+AvS3oteEiAAA="
+        },
+        {
+          "src": "/gallery/graduations/3-1600.webp",
+          "srcset": "/gallery/graduations/3-800.webp 800w, /gallery/graduations/3-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRjIBAABXRUJQVlA4ICYBAACwBgCdASoUAB4APu1gp02ppSMiMAgBMB2JbAC1GukpA4wTQF2d1gBpX/lwwhrlrtBrOTJIIiqFBMhdOBx0AAD9eaQ3N/4MiZdswlt6n9B3UQp5vxForbCAWFoQboNRmDOPynYDpwCyXxbTFdjnYVziUDvq8KAC8GJkB8WPSKIDpdx7Yc1i/8+mwT8+mQLWn5cv6ZS5u62bBVJEGI1QvGU4PENWR6voVb9cdxD9Wj7nBmoyg1QIc+/8sVAonLTXJro1KqJd2VdRqwzm6Fwc2sUYm/zUT4jvHCA3nAsukla6d9Cy3NMghWCbvWZlIb9iP7wK7Qi8GzH5iOSL5HkvdtGMETmXMYZxltNJ+6Fs82XhynTLqnIblwzStflDeSySJjD4FM4AAAA="
+        },
+        {
+          "src": "/gallery/graduations/4-1600.webp",
+          "srcset": "/gallery/graduations/4-800.webp 800w, /gallery/graduations/4-1600.webp 1600w",
+          "width": 2500,
+          "height": 1667,
+          "ratio": 1.4997,
+          "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAABwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JQBYfv/1KA71BqVPKEE1TKgoWwADcGycwV9DLVoHol8kZ7ycIMKMBa5O5VFzUjLVSwQ0M2PtCykUnkQ4rS8qqX6pv6hR0bnJo+vp3DlAtEAkuxNiewe7eAP85jciJ92vaEaIbWm1wISt51bwY8nPVzNnfjgXDGE44/9fvdjPCAcKbGEfQHgMy+J8+tNWXUwAAAA=="
+        },
+        {
+          "src": "/gallery/graduations/5-1600.webp",
+          "srcset": "/gallery/graduations/5-800.webp 800w, /gallery/graduations/5-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRhwBAABXRUJQVlA4IBABAADwBQCdASoUAB4APu1opk2ppiMiMBgMATAdiWwAsR6DKptJ8sHHGrnNygTwoorrhsjvclZV3HaqdAD+55i1Mrqpq+d5CmGd5h+4h4wli6siycnJTITI1981bf709rJWO3eucUk068XSvCcG1Ll+76BsKCun7NpBSq+lRJMHP0Ucvqg8MNBeIc9Gd8LhWj38oUQ4d5UiTNoqICgaPvFfwYh1K00NBu/VgnN+HP+iTvbMrMPkIiv/Z9cTkBQ7Eooy24bRShaPpjDLUupN+tD+/1k9ksnTpRf4hREnKQ9QsF2AVILbW2mrEZWehp0+VB/tZcVinLINVxrkRkhkM0ROj6ueYR6BQ9gJj4MK8MFtAAAAAA=="
+        },
+        {
+          "src": "/gallery/graduations/6-1600.webp",
+          "srcset": "/gallery/graduations/6-800.webp 800w, /gallery/graduations/6-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAAAQBgCdASoUAB4APu1kqU2ppaOiMAgBMB2JbACdMuov/l2AM4fCfyFPrSLj9Hok6L0Uy4EnzuvVAAAA/uWviv1zl8ftsudtgy3O/rDVWnZh3G/wt475EYf7zJC+ZvWzjcyu264Bf384FR8p9EGwrj5vcpmmtewL4OC4EGXUD164h2MmviZv2vfsZ7fbAtELRM3p1gviJvaNwWvxsNN1f9idlBJpEOr9MsKblDwbYxxRhXpzDhJA8yhRAYQukn5sa4osdu6XVX1aUfQXsFul/5LWaDuswKjZQBBoVyUWFD5yK5d2+9R9DHIMbjPPZCbv71+Fv3D+cQQ5ClDdMrM5GbG7oI1kIPnmVeAf21BoztOliCAA"
+        }
+      ]
+    },
+    {
+      "slug": "matrimony",
+      "title": "Matrimony Photoshoots",
+      "blurb": "Portraits that actually look like you — for the profile that matters.",
+      "icon": "ring",
+      "photos": [
+        {
+          "src": "/gallery/matrimony/1-1600.webp",
+          "srcset": "/gallery/matrimony/1-800.webp 800w, /gallery/matrimony/1-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAAAwBQCdASoUAB4APu1mq0+ppaOiMBgIATAdiUAXYAHDNSh2D6i0fxR05r0h+a5Ytu9cAAD5BMHUQt/OE6ZHvtZSATsDIcqFolZWFbMrPn0l0ky4ET+4CkDf0wQZ22RVZ0yeIxt9FX17Xbc4DKEZdcpJ1Bn6cwez1VBIG3luUDBKy3etRSjnE/szXRHexZltSMC2ArGJO2CoaWp5GY3Gvw3muNhaTCjUR/yLipgC5JgzXeRsB2/y+7iZgxCBzN2kydAJLGrBVeafwXarOkzOYADAAAA="
+        },
+        {
+          "src": "/gallery/matrimony/2-1600.webp",
+          "srcset": "/gallery/matrimony/2-800.webp 800w, /gallery/matrimony/2-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAABwBQCdASoUAB4APu1kqE2ppaOiMAgBMB2JYgCo9Yzkh6dkqs3Lk8j0l3CSUQFdNYo4EmEkAP7ZYphiBG1LTyb/7jHIb0AaRWIwsYQo5WE/4WFlfB5Pgs/02U6YYTHyEmOs8PcrVAvpptNZL1GVQEbDxBN1PDh23w+ctFcbEVfad3hdQG6bMxIvul6pAyivJ5QRGIPuIfhvWWA8lnxrVVC8A8y0iQ8LvWvBuwqQupEsykPLTFzUd9lR1eIn+aZ5Zm0yiy5BwrY7OZ54ATfuQ6JCLSYoHj2rbUPruVGqfDCi156XjFof5VZCDcRs2kwA"
+        },
+        {
+          "src": "/gallery/matrimony/3-1600.webp",
+          "srcset": "/gallery/matrimony/3-800.webp 800w, /gallery/matrimony/3-1600.webp 1600w",
+          "width": 1621,
+          "height": 2500,
+          "ratio": 0.6484,
+          "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAADwBQCdASoUAB8APu1mqk2ppaQiMAgBMB2JYgC1CE67+AjSsxDjFWTPAV9IH8/GIjeDndcc8Eg5QAD+3ui2TqwyXDl5grGvzxmcbYhIOGk1UKJfVloGM4WdzaHhtGINAxxyjfV1OgPDMHvshWrln3wRKQBMAJS7GhfksbO/i/85B3hNu9n02zFswDClv2ndfgrGXVLojDz/8r2N0nQfUmwZdTdqFyNsPO4kQPPxNs0mI0cjPjFPNxvpbIg0UqUmwLZ03M5gpgAAAA=="
+        },
+        {
+          "src": "/gallery/matrimony/4-1600.webp",
+          "srcset": "/gallery/matrimony/4-800.webp 800w, /gallery/matrimony/4-1600.webp 1600w",
+          "width": 1621,
+          "height": 2500,
+          "ratio": 0.6484,
+          "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAADQBQCdASoUAB8APu1kqk2ppaQiMAgBMB2JYgCdIQT4ABWAFvAegHpEptta0yebpnVSWyOb9cvIAM4+De0EtAOTNIlWtECZgKbSpY+/MTgYxeqWvzdSH28CmOoSwaBRBy+KuaJf4jiIj7ip8csqio0veoRwQoqGzu3Kgy+QQy+SRZH7ZkhDUJ0yaXOu6XQcbfXnJYBiUVq8A9VnXmxntHHy3FPoT9UYejgxcFPoZnas4ndQAI/Xqjxzj0cqb38LLIlxkJHer+egFdrYLQOIlZWxAAA="
+        },
+        {
+          "src": "/gallery/matrimony/5-1600.webp",
+          "srcset": "/gallery/matrimony/5-800.webp 800w, /gallery/matrimony/5-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBQCdASoUAB4APu1gp06ppSMiMBgMATAdiUAVIpEYIxLxFCx7QeJcKy/z9eVOnWYgAMkYplAa0CY3MSsDJrl2MU+U4fohx+ui4IadTesVfVrBMjSpmFr55tguMgj9zd4pu5c5+rNJCR8StMOEQpzsnGgcym0a0B9zyN8EAFd5amIrUlvk8hCb7AstSnskfzLI+wNH/doIUpt0kDEoorYy+ea5cmH12iVYAAAA"
+        },
+        {
+          "src": "/gallery/matrimony/6-1600.webp",
+          "srcset": "/gallery/matrimony/6-800.webp 800w, /gallery/matrimony/6-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBQCdASoUAB4APu1qr1CppaQiqAqpMB2JagCdM4T/+BR7I7IxkpKGaTeQ2zai0PnUPIp/wAD+rTQO3IHL8gMoZCJQj3bi5yinh8UQVSenTYaDAV7+JZfGqZ487CTmqrm04F8mlSGKuJ1KH0KWvjBfvXL00kJAXCKNensj4GXDmXQG0iDl3TKIA+tAw87EyL1l3U8w/eTMx09/0ceyy2xEp9b6AchprcJxOPfMcTh6HI8TXfTfY15lcoUHIAAA"
+        }
+      ]
+    },
+    {
+      "slug": "family-portraits",
+      "title": "Family Portraits",
+      "blurb": "Everyone in one frame, before everyone grows up again.",
+      "icon": "family",
+      "photos": [
+        {
+          "src": "/gallery/family-portraits/1-1600.webp",
+          "srcset": "/gallery/family-portraits/1-800.webp 800w, /gallery/family-portraits/1-1600.webp 1600w",
+          "width": 2500,
+          "height": 1708,
+          "ratio": 1.4637,
+          "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoUAA4APu1iqU2ppaOiMAgBMB2JagCdMoKCrb44tjtwTOaOS7JY0fbW9goAAP7jpoXqC2h88NFk07036f0Pl46zbcdJkLgQWQiXFZDe5JkerPzVtK1RZnDDF4ZBnyIehtJ15tFnUnaaNqGcCpOmjiI/tiT3EltSpuM8zi4xwzvR97yiFbV2ow/fnsf3qzCOGgV+iYcpnHmEnDoDZIYAAA=="
+        },
+        {
+          "src": "/gallery/family-portraits/2-1600.webp",
+          "srcset": "/gallery/family-portraits/2-800.webp 800w, /gallery/family-portraits/2-1600.webp 1600w",
+          "width": 1724,
+          "height": 2500,
+          "ratio": 0.6896,
+          "blur": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAAAwBgCdASoUAB0APu1mqk2ppaQiMAgBMB2JbACxHxvEB8gAfhGntqUzNbAgcj6F2b2nsQk/CPqyIgoAAP6XAt+Np+orp6vnXAo0Op6Vb64RciG67sMbI0U3fEqZRV74XYHQjpbnu3ReyLhe4SUWsUi2dSzx86Zl1uzk63VUGpKvd8S1sLOXLun5Tkq0eSkwIpBO30x/fP5+b5PhMx3IU2iJYk09IAmRpLxUs4i4uGeExwXq9+KNxge1FpwAYOn2ehHWsinNQYMSN/AiYEbxoZUH8l0exRTTqdGBwJoDkikXdoxQo5xTHTl1NgtvtL35K22W6JsqpDmtiAS+x/i1pJIlCMRAKMSggYu1KgAA"
+        },
+        {
+          "src": "/gallery/family-portraits/3-1600.webp",
+          "srcset": "/gallery/family-portraits/3-800.webp 800w, /gallery/family-portraits/3-1600.webp 1600w",
+          "width": 2500,
+          "height": 1708,
+          "ratio": 1.4637,
+          "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwBACdASoUAA4APu1iqU2ppaOiMAgBMB2JbACdMoR2bf/jeAFU0VlejhJaSWmXtQAA/j9tX3xhOfgqdJWhbz1j5QUC9uX+RMEwc6/TlRAkwMHdNK9D1b4IahZsXKSJX6SyzwTpvXVqLb2xiZ9O7JWwlRW+aL9CjwXsZTD/+Jt8Nhz+NsAAAA=="
+        },
+        {
+          "src": "/gallery/family-portraits/4-1600.webp",
+          "srcset": "/gallery/family-portraits/4-800.webp 800w, /gallery/family-portraits/4-1600.webp 1600w",
+          "width": 2500,
+          "height": 1800,
+          "ratio": 1.3889,
+          "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoUAA4APu1iqU2ppaOiMAgBMB2JbACdMoACGl06+UScgsPOgAD+2iBKPHTN5tKsNoKwA1Kd2rzYfWcQoGxgIpcN7Hq34q2/Ohxq5JdKhQGEz3kSmX66lK2qt41C9DisNupwOVvsyFAv7cxC023F4DeV65Oa4CW7WyVVuFPQ6DuK/WFBmSuAAA=="
+        },
+        {
+          "src": "/gallery/family-portraits/5-1600.webp",
+          "srcset": "/gallery/family-portraits/5-800.webp 800w, /gallery/family-portraits/5-1600.webp 1600w",
+          "width": 1800,
+          "height": 2500,
+          "ratio": 0.72,
+          "blur": "data:image/webp;base64,UklGRhYBAABXRUJQVlA4IAoBAABwBgCdASoUABwAPu1irE+ppSQiMBgIATAdiWQAnTKDPCPoGtYH3TwfZTEbeB29ZM7fbGOAIXgkZrZ6u7AA/uwrYuE9ZmGoxEYQxQRRl6FDNJDIMzQ7tCL6QAYryOOccTPXaa6ZshLEb1Y2UYz7RAr1Xj5RutNsf1XrPW06QpvrU+HHR+VvvvOCnUiW/yXeZZNHBJILlwgMoYnjVz91jpZDbfEqntzOcz+SUx24nT6w/4UlaQoevTFjte2EdqDoPuQoOcEqMoB9QIpHqxJAP1GgxTTLLm8L46UoxZ2LiYHmdefiNVbSyrT7OrepBORMS7w0HwuCeiqJAvqURk5aOu2oCbchi9hLAXcUAA=="
+        },
+        {
+          "src": "/gallery/family-portraits/6-1600.webp",
+          "srcset": "/gallery/family-portraits/6-800.webp 800w, /gallery/family-portraits/6-1600.webp 1600w",
+          "width": 2500,
+          "height": 1709,
+          "ratio": 1.4628,
+          "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBACdASoUAA4APu1iqU2ppaOiMAgBMB2JbACdEf/gNJkmcva2edHrSkAA9p1FTmfa/U4FMB7SGUGkT9Tj9m8cG9A+kAWEZSqI7MVvHij7AEJ+Au+AremWLNeD8NXoYGFqWgl4CUriroxdDB7LggCmwW6cmbetnXY6XzAh066GQRo4/E6/+2YSGsYsigtvdly4ZHSRq2yL9sHwAAA="
+        }
+      ]
+    }
+  ]
+}

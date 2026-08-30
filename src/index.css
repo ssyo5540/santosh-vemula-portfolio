@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --edge: 6vw;
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --edge: 4.5rem;
+    }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Lenis drives scrolling; native smooth scrolling would fight it. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    @apply bg-shell font-sans text-ink antialiased;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-vermilion text-shell;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.vermilion');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Warm scrollbar so the chrome matches the palette. */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-linen;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-ember/60;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-vermilion;
+  }
+}
+
+@layer components {
+  .edge {
+    padding-left: var(--edge);
+    padding-right: var(--edge);
+  }
+
+  .eyebrow {
+    @apply text-[0.68rem] font-bold uppercase tracking-eyebrow text-ember sm:text-xs;
+  }
+
+  /* The gradient rule that trails every eyebrow, as in the mockup. */
+  .eyebrow-rule {
+    @apply h-px w-10 shrink-0 bg-gradient-to-r from-ember to-transparent sm:w-16;
+  }
+
+  .headline {
+    @apply font-display font-medium leading-[1.05] tracking-[-0.015em] text-ink;
+  }
+
+  .gradient-text {
+    @apply bg-swirl bg-clip-text text-transparent;
+  }
+
+  .card-frame {
+    @apply relative overflow-hidden rounded-2xl bg-sand shadow-frame;
+  }
+
+  /* Thin warm hairline used to separate stacked sections. */
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-sand to-transparent;
+  }
+}
+
+@layer utilities {
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+}
+
+/* GSAP SplitText targets — set before the timelines run so nothing flashes. */
+.split-line {
+  overflow: hidden;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
