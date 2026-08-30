@@ -26,6 +26,8 @@ export default {
       fontFamily: {
         display: ['"Playfair Display"', 'Georgia', 'ui-serif', 'serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        // Logotype face: geometric grotesque, matching the supplied wordmark.
+        wordmark: ['Poppins', 'Futura', 'Avenir Next', 'sans-serif'],
       },
       backgroundImage: {
         swirl: 'linear-gradient(135deg, #FFA000 0%, #EF7702 38%, #C02907 74%, #AA0009 100%)',

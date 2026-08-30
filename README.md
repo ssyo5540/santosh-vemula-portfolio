@@ -47,6 +47,13 @@ sweep, the footer wave, and every accent rule.
 Type is Playfair Display for display copy and Inter for everything else, both from
 Google Fonts.
 
+The PIXEL STORIES logotype in the hero (`src/components/Wordmark.tsx`) is set as live
+text in Poppins ExtraBold, with "STORIES" hollowed out via `-webkit-text-stroke`,
+rather than shipped as an image. That keeps it sharp at any size, lets it scale with
+the viewport and leaves it selectable and readable to search engines. To use the
+original artwork instead, drop the file in `public/` and swap the two `<span>`s in
+that component for an `<img>`; the surrounding layout does not change.
+
 ## Motion
 
 Two libraries, split by what each is good at.
