@@ -47,7 +47,11 @@ const HERO = [
 
 /**
  * Curated running order. First entry of each set doubles as the cover frame.
- * `root` overrides the source tree for a collection; it defaults to PHOTOS.
+ *
+ * `root` overrides the source tree for a whole collection. Individual entries
+ * can override it again with a `drive:` or `legacy:` prefix, which is what
+ * lets Birthdays mix the older shoots with the newer Drive export in one
+ * ordered list.
  */
 const COLLECTIONS = [
   {
@@ -126,7 +130,7 @@ const COLLECTIONS = [
   {
     slug: 'birthdays',
     title: 'Birthdays',
-    blurb: 'Cake smashes, balloon arches and the faces in between.',
+    blurb: 'First candles through sixteenth, cake smashes to full-scale parties.',
     icon: 'cake',
     src: [
       'birthdays/2.jpg',
@@ -135,6 +139,20 @@ const COLLECTIONS = [
       'birthdays/1.jpg',
       'birthdays/6.jpg',
       'birthdays/3.jpg',
+      'drive:9 16th Birthday/DSC09879.jpg',
+      'drive:9 16th Birthday/DSC00077.jpg',
+      'drive:9 16th Birthday/DSC09414.jpg',
+      'drive:9 16th Birthday/DSC09403.jpg',
+      'drive:9 16th Birthday/DSC00193.jpg',
+      'drive:9 16th Birthday/DSC09625.jpg',
+      'drive:9 16th Birthday/DSC09621.jpg',
+      'drive:9 16th Birthday/DSC00074.jpg',
+      'drive:9 16th Birthday/DSC09376.jpg',
+      'drive:9 16th Birthday/DSC00066.jpg',
+      'drive:9 16th Birthday/DSC00161.jpg',
+      'drive:9 16th Birthday/DSC09746.jpg',
+      'drive:9 16th Birthday/DSC00055.jpg',
+      'drive:9 16th Birthday/DSC09369.jpg',
     ],
   },
   {
@@ -201,6 +219,13 @@ const COLLECTIONS = [
   },
 ]
 
+/** Entries may name their own tree with a `drive:` or `legacy:` prefix. */
+function resolveSrc(rel, collectionRoot) {
+  if (rel.startsWith('drive:')) return path.join(DRIVE_ROOT, rel.slice(6))
+  if (rel.startsWith('legacy:')) return path.join(PHOTOS, rel.slice(7))
+  return path.join(collectionRoot ?? PHOTOS, rel)
+}
+
 async function render(srcFile, slug, index) {
   const input = sharp(srcFile, { failOn: 'none' }).rotate()
   const meta = await input.metadata()
@@ -249,7 +274,7 @@ async function main() {
     await mkdir(path.join(OUT_DIR, c.slug), { recursive: true })
     const photos = []
     for (const [i, rel] of c.src.entries()) {
-      const file = path.join(c.root ?? PHOTOS, rel)
+      const file = resolveSrc(rel, c.root)
       if (!existsSync(file)) {
         console.warn(`  ! missing ${rel}`)
         continue

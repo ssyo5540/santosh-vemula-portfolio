@@ -355,7 +355,7 @@
     {
       "slug": "birthdays",
       "title": "Birthdays",
-      "blurb": "Cake smashes, balloon arches and the faces in between.",
+      "blurb": "First candles through sixteenth, cake smashes to full-scale parties.",
       "icon": "cake",
       "photos": [
         {
@@ -405,6 +405,118 @@
           "height": 2500,
           "ratio": 0.6668,
           "blur": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAACQBQCdASoUAB4APu1sq08ppqOiMBgIATAdiUAWoQgolG40IYxizeyHfyoaEosZMKCUeWzr9AD+604mTSZrtgwVTQB1V6zIJ+CoGFzif5R3fXByMCdg3qSUuyuFC0YEZTHlIPnrvEHdjhy3nwyY8KDSig7vnyhtyOfHwehfY7s3lzsrUMnpiGYTxPqyQEnFX55SYDZB/BrW2pRjFpJAOrCrKeyjuHbQP3RRYwX6RaQpR0OUYZHwrCdd/Pp7LhkjttSXG2lWGA2BLXKBZGmdhYYZBFxWa64U1OViohLIt8Gq+tYQ9rO7ySSh6Lkic1oWG4rPyQAA"
+        },
+        {
+          "src": "/gallery/birthdays/7-1600.webp",
+          "srcset": "/gallery/birthdays/7-800.webp 800w, /gallery/birthdays/7-1600.webp 1600w",
+          "width": 7008,
+          "height": 4672,
+          "ratio": 1.5,
+          "blur": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdMoAlngrFPAmUROdQAPzXy1qQODp5/qxd04Hlp0SgfFLTvDl4CogMut6AS0i7FL5JGNm2bJjDxI4679aj1niaP5dTr5QvLR8RfkK6yuwQsr1xcEIjaxat5TZpTNa7R6Y1sOiaL93iuuS+tY0A/RYhTHveIkfWMfhj2mC5yXzWYkpFakjEfa8hEN2U6g78LgAA"
+        },
+        {
+          "src": "/gallery/birthdays/8-1600.webp",
+          "srcset": "/gallery/birthdays/8-800.webp 800w, /gallery/birthdays/8-1600.webp 1600w",
+          "width": 6793,
+          "height": 4529,
+          "ratio": 1.4999,
+          "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACsAYv+32PL7UOERK19UwAA/uYD+5++9FOTlEPr0DDxswSAPyKt+Q7aKDZbJsm/OU9pTdGPiMQDhaILAo6wOzL6VWVjwR2YhF2Lx22WFKpNReYaKRNK7IU4owZSdQiXOiYzznFekyVBKQrxbYdqqWwGJqABTSO7AAAA"
+        },
+        {
+          "src": "/gallery/birthdays/9-1600.webp",
+          "srcset": "/gallery/birthdays/9-800.webp 800w, /gallery/birthdays/9-1600.webp 1600w",
+          "width": 4672,
+          "height": 7008,
+          "ratio": 0.6667,
+          "blur": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAAAwBQCdASoUAB4APu1qr1AppaSiqAqpMB2JbACdMy/AuRdHeaSxLhU9W/nCeWZuR54CAADeRKflGSPY2EICv3nReVDcrIYkLtdj0gXyTBia27TggsXBepFQBtkhny4vQEyx5MNV4rqhIN0uIf++ae/vobSrK/uO8Hqs7DInJzFh/pJUpdQ/OUtLWqk9W2gdDBD45nmN9qy415arN33M9uOhAGaG5BtbhhyZlySrQQahFwrdHoEXHrPvWNGA4dkUM+jqCZj1kI9PfJ8HninPHEZpLEsIqI0e3NhInFAedX+Dhe+WR2cqVATWmj2JXo1ZiTfef4AA"
+        },
+        {
+          "src": "/gallery/birthdays/10-1600.webp",
+          "srcset": "/gallery/birthdays/10-800.webp 800w, /gallery/birthdays/10-1600.webp 1600w",
+          "width": 4551,
+          "height": 6827,
+          "ratio": 0.6666,
+          "blur": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAADwBQCdASoUAB4APu1qrlCppaQiqAqpMB2JbACdBAgR8EUWUUEyffAZd67RP63HwSr8wOlJQ/VqwAD+72X89yGwR0HNtRZu3WTBG0dUFEEV201j4hcTdGuSqBBw7jjsSTsQsNVUOUCj0DroLvyrDdoSaTCqGRwn3DeZtLDCzWe+CTYF2L8fUNDWL30h+T2g6SpUXoTodX4erj2ElSyvT5LSgmPl2yT/wAAskSnO1oq46tKo1pHQAzHMSLpnf7ilQ7z55um0wf4bsUjcOp0rWG8dsqKR7e9JubEIneAA"
+        },
+        {
+          "src": "/gallery/birthdays/11-1600.webp",
+          "srcset": "/gallery/birthdays/11-800.webp 800w, /gallery/birthdays/11-1600.webp 1600w",
+          "width": 4672,
+          "height": 7008,
+          "ratio": 0.6667,
+          "blur": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAADQBQCdASoUAB4APu1gqE2ppaOiMAgBMB2JbACpJuu0CnHFtKknI6g1aAJnKJGAXIBjq3w06idIAP7G6rVZiIPE10nvapr7T4Mf+TN6lcPIabm1RGZaGCp50TTmMeqIeDzsVcbdqVjYHgD1N5129hZqhwDpnm7D0GqlS/YClv4ko1Z6hmYK9N9owx9UYrQDH74OctFlIWtHWVDQq/F9NisfQ0a7Joq4bafVXusnmTbPD/AUqsizuwvspkoH1mkwT1QprMi4oYui9UVkN4n7q9H3/ii4dx/Tdg5Z0PmLXfgy3Zwkw6N0AH3jdDQXRrP4ih0lZpNrmAA="
+        },
+        {
+          "src": "/gallery/birthdays/12-1600.webp",
+          "srcset": "/gallery/birthdays/12-800.webp 800w, /gallery/birthdays/12-1600.webp 1600w",
+          "width": 4672,
+          "height": 7008,
+          "ratio": 0.6667,
+          "blur": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAABQBgCdASoUAB4APu1ur1KppiQiqAgBMB2JbAC2+oJYAWwEUSefNyjjB0t70DW0OjLOQGLIDa00HrDjAAD++MtymmVq0h9nYNw+/Mz/e9yc2bfU4ZlOyLYc9Ku9j7Guqlxe56Qfs9rzLaai1/kcGfrib549X5pPMGlc5LCY3B2jlvU2CpY/Q9lUlGLc5TjCKpOuiEKOOaOHa+R1A68fnjwPxwRjvFN2AJEw4lZrvaxC7quY/c7cB1S5watO25PxmULtM39+zlFEtFyhWFujZzMLF3QtkgaK6Bqm+EeP0Ua/PHzNyzpykQ7YMIENboVsgejvu7ywAS+UwRCmNAAAAA=="
+        },
+        {
+          "src": "/gallery/birthdays/13-1600.webp",
+          "srcset": "/gallery/birthdays/13-800.webp 800w, /gallery/birthdays/13-1600.webp 1600w",
+          "width": 4672,
+          "height": 7008,
+          "ratio": 0.6667,
+          "blur": "data:image/webp;base64,UklGRjQBAABXRUJQVlA4ICgBAABQBwCdASoUAB4APu1epk2ppKMiMAgBMB2JbACsMoR/gLCzXfmHwCfBHLzToynMU40CCmHX6nTCqpD06VWkwp3DVGWwAP7tYX9uzhS3sh/FdBLkmuSHNqMeNCSlCSv6E3W1e3qZZ2cRQgFUh4aI6ndpvveRqP5VUzAeVVEErencjiv/iRA0a9E7pbtbN+yilYLOUmDOJJ/lq1L7H7/sy8bs0ldWfs4ZOQo7NZAsK3RQRmiONhUTNuBYpC6ZSe9EWeAJ0UFClcxIyWMulYqSbRB+YDUFpXEHZQQMfAsPeo5FiS0XezF9pPCCZ/i8YPduI+zcxWKQTC+LCRnqnPGDM+WGjVOtT7Zx26bLBPr/DkE1dgXs5Tf10sS2XEqbAK4l6DHFEcZZUYAAAA=="
+        },
+        {
+          "src": "/gallery/birthdays/14-1600.webp",
+          "srcset": "/gallery/birthdays/14-800.webp 800w, /gallery/birthdays/14-1600.webp 1600w",
+          "width": 4579,
+          "height": 6868,
+          "ratio": 0.6667,
+          "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAAAwBQCdASoUAB4APu1srVEppaQiqAqpMB2JbACdL7BWAEDcEYEZ/egZVnybS0Y0V0ok0gD+8X9YlZPSPQdxGRAWCAEmweD7z8qbOgAR+L1q6FAx07z9Ku/nDTRo5iJ+d6sIrzQcX07jmfoZ01rDGQfS3phr/9B8p/7oU/4pLvO6SPorggFPi+CrAzyxe+vsPwlKZGbFJE4DjGAWWcdXEHMRLOdGTq+AJMGWelbgKVaKrN4Cb9v7oSR9k6/on+UbM/MvyHU/dTYFfuPSrUAAAA=="
+        },
+        {
+          "src": "/gallery/birthdays/15-1600.webp",
+          "srcset": "/gallery/birthdays/15-800.webp 800w, /gallery/birthdays/15-1600.webp 1600w",
+          "width": 6455,
+          "height": 4303,
+          "ratio": 1.5001,
+          "blur": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JagC06YvqyXr1I56zSWaZiAD+eTts/fezTg8f/gwFZqbwexmXZKiqlz1tdfoUu7dTX8Zs5LG/7QGbfHZEl7mmYo1ISlAr1jgtjCFAq63VvlrC0CgXhlET6RfFAq3p/frYDe0Ca9ZQcbxB6Le7WnIMiFNju/MVTgVCxvJnT/J4dJngN0LZgacNK5DyCBAA"
+        },
+        {
+          "src": "/gallery/birthdays/16-1600.webp",
+          "srcset": "/gallery/birthdays/16-800.webp 800w, /gallery/birthdays/16-1600.webp 1600w",
+          "width": 7008,
+          "height": 4672,
+          "ratio": 1.5,
+          "blur": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZACdIE3JqgMsD3QLKBlv2P3gYrHAAP7vKNE614DOHM4SxAkawc3yMslS+hq/O+l+J6guoYSMreYgT/6iF5cHkceNxu/E+IkuFkec7FhUZXR57EhAQNionGLk5OPS9duYr5bE1KC5lG18jgqWgiQwbueZKyCGvIheCkrMWFbYzcAA"
+        },
+        {
+          "src": "/gallery/birthdays/17-1600.webp",
+          "srcset": "/gallery/birthdays/17-800.webp 800w, /gallery/birthdays/17-1600.webp 1600w",
+          "width": 7008,
+          "height": 4672,
+          "ratio": 1.5,
+          "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JagAAW4wVb196tLhBAF/AAP7p4ZMerc4OUTGO/PbIyplKIrZOqFFFt8q/4/Xj5TXujvqxyykXyL4bA67QTu160hP729dqVThadG9Wrtpnpc30bwkPRS/4UvaThAAA"
+        },
+        {
+          "src": "/gallery/birthdays/18-1600.webp",
+          "srcset": "/gallery/birthdays/18-800.webp 800w, /gallery/birthdays/18-1600.webp 1600w",
+          "width": 6520,
+          "height": 4347,
+          "ratio": 1.4999,
+          "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACpE8ACzIz4AcNjjmaqiAAAAP5ll2mFR4C/tNJQpyexWn0Fkd/WhwLVu/kIjYqybJ/WRlCXhGJao4DXc6lfHWEYQH/N9xQIMsAALV0UkBBUj93UGQv2cET1BaA/rcTmMxc1eMU/dc7Wy2wl8BG3Nfk1h0NgejulaiSAC3QAiVFjJb74uDGeD/E8AA=="
+        },
+        {
+          "src": "/gallery/birthdays/19-1600.webp",
+          "srcset": "/gallery/birthdays/19-800.webp 800w, /gallery/birthdays/19-1600.webp 1600w",
+          "width": 7008,
+          "height": 4672,
+          "ratio": 1.5,
+          "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JQBadBDVn5ck6Se4oE4DAAP7sWlVRlIBw95f0FpXIMGXlvKFY7VDE3o9s4S0uZvgC3iA36mbXIzmrWxQZYp9NrI8d2x7zuNYIANdxCiHiNvxXigxG1S5iN1Uranx+52gTfAUEAAA="
+        },
+        {
+          "src": "/gallery/birthdays/20-1600.webp",
+          "srcset": "/gallery/birthdays/20-800.webp 800w, /gallery/birthdays/20-1600.webp 1600w",
+          "width": 6509,
+          "height": 3710,
+          "ratio": 1.7544,
+          "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBACdASoUAAsAPu1iqU2ppaQiMAgBMB2JagCsACHvhX7R5GmtlOPhAAD+eSgJqw34LhTtLKKKS7Srh1QfTqWDu1+Yd3MHe//msuY7A9abYdeWonraoA6tl9KYRqMTWckb2/Kdfw2x7f6oj4QiTLiWVm6quA9YwPRoSJtbiU0SwSqIAAA="
         }
       ]
     },
