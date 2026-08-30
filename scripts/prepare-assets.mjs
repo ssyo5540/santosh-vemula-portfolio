@@ -21,6 +21,10 @@ const SOURCE_ROOT =
 const HERO_ROOT =
   process.env.HERO_ROOT ?? '/Users/satwikrudra/Documents/Personal/SVP/carousel-originals'
 
+/** Category folders exported from the studio's Drive, newer than the legacy tree. */
+const DRIVE_ROOT =
+  process.env.DRIVE_ROOT ?? '/Users/satwikrudra/Documents/Personal/SVP/drive-originals'
+
 const PHOTOS = path.join(SOURCE_ROOT, 'events', 'photos')
 const OUT_DIR = path.resolve('public/gallery')
 const MANIFEST = path.resolve('src/data/gallery.json')
@@ -41,7 +45,10 @@ const HERO = [
   'DSC09625.jpg',
 ]
 
-/** Curated running order. First entry of each set doubles as the cover frame. */
+/**
+ * Curated running order. First entry of each set doubles as the cover frame.
+ * `root` overrides the source tree for a collection; it defaults to PHOTOS.
+ */
 const COLLECTIONS = [
   {
     slug: 'weddings',
@@ -58,17 +65,34 @@ const COLLECTIONS = [
     ],
   },
   {
-    slug: 'pre-wedding',
-    title: 'Pre-Wedding',
+    slug: 'engagement',
+    title: 'Engagement',
     blurb: 'Coastlines, courthouses and golden hour before the big day.',
     icon: 'heart',
+    root: DRIVE_ROOT,
     src: [
-      'pre-wedding/10.jpg',
-      'pre-wedding/6.jpg',
-      'pre-wedding/16.jpg',
-      'pre-wedding/15.jpg',
-      'pre-wedding/4.jpg',
-      'pre-wedding/8.jpg',
+      '1 Engagement/DSC03626.jpg',
+      '1 Engagement/DSC07961.jpg',
+      '1 Engagement/DSC03601.jpg',
+      '1 Engagement/DSC01848.jpg',
+      '1 Engagement/DSC02717.jpg',
+      '1 Engagement/DSC00014.jpg',
+      '1 Engagement/DSC03311.jpg',
+      '1 Engagement/DSC02647.jpg',
+      '1 Engagement/DSC07672.jpg',
+      '1 Engagement/DSC03833.jpg',
+      '1 Engagement/DSC02492.jpg',
+      '1 Engagement/DSC00226.jpg',
+      '1 Engagement/DSC00055.jpg',
+      '1 Engagement/DSC01767.jpg',
+      '1 Engagement/DSC07821.jpg',
+      '1 Engagement/DSC03982.jpg',
+      '1 Engagement/DSC04249.jpg',
+      '1 Engagement/Main.jpg',
+      '1 Engagement/DSC09951.jpg',
+      '1 Engagement/DSC09953.jpg',
+      '1 Engagement/DSC09968.jpg',
+      '1 Engagement/DSC09971.jpg',
     ],
   },
   {
@@ -132,13 +156,19 @@ const COLLECTIONS = [
     title: 'Graduations',
     blurb: 'Years of work, one tassel, and the campus that carried you.',
     icon: 'cap',
+    root: DRIVE_ROOT,
     src: [
-      'graduation/4.jpg',
-      'graduation/11.jpg',
-      'graduation/6.jpg',
-      'graduation/2.jpg',
-      'graduation/7.jpg',
-      'graduation/9.jpg',
+      '7 Graduation/341A0837_1.jpg',
+      '7 Graduation/Main.jpg',
+      '7 Graduation/341A0477.jpg',
+      '7 Graduation/DSC04589.jpg',
+      '7 Graduation/341A0714.jpg',
+      '7 Graduation/DSC04593.jpg',
+      '7 Graduation/341A0597.jpg',
+      '7 Graduation/341A0496.jpg',
+      '7 Graduation/DSC04663.jpg',
+      '7 Graduation/DSC04561.jpg',
+      '7 Graduation/1.jpg',
     ],
   },
   {
@@ -219,7 +249,7 @@ async function main() {
     await mkdir(path.join(OUT_DIR, c.slug), { recursive: true })
     const photos = []
     for (const [i, rel] of c.src.entries()) {
-      const file = path.join(PHOTOS, rel)
+      const file = path.join(c.root ?? PHOTOS, rel)
       if (!existsSync(file)) {
         console.warn(`  ! missing ${rel}`)
         continue
@@ -228,7 +258,8 @@ async function main() {
       process.stdout.write(`\r  ${c.slug} ${photos.length}/${c.src.length}   `)
     }
     console.log(`\r  ${c.slug.padEnd(18)} ${photos.length} frames`)
-    const { src, ...rest } = c
+    const { src, root, ...rest } = c
+    void root
     collections.push({ ...rest, photos })
   }
 
