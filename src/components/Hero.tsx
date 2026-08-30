@@ -59,7 +59,7 @@ export function Hero({ ready }: { ready: boolean }) {
   return (
     <section
       ref={root}
-      className="relative overflow-hidden pb-10 pt-14 sm:pb-14 sm:pt-20"
+      className="relative overflow-hidden pb-10 pt-14 sm:pb-14 md:pt-24"
     >
       {/* Brand-gradient corner sweeps, lifted from the logo's swirl. */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden>
@@ -69,10 +69,11 @@ export function Hero({ ready }: { ready: boolean }) {
           className="absolute inset-x-0 top-0 h-[46vw] max-h-[640px] w-full"
         >
           <defs>
-            <linearGradient id="sweepL" x1="0" y1="0" x2="0.9" y2="1">
+            <linearGradient id="sweepL" x1="0" y1="1" x2="1" y2="0">
               <stop offset="0%" stopColor="#C4390C" />
-              <stop offset="55%" stopColor="#F07A03" />
-              <stop offset="100%" stopColor="#FFB427" />
+              <stop offset="42%" stopColor="#EF7702" />
+              <stop offset="82%" stopColor="#FFB427" />
+              <stop offset="100%" stopColor="#FFC64D" />
             </linearGradient>
             <linearGradient id="sweepR" x1="1" y1="0" x2="0.1" y2="1">
               <stop offset="0%" stopColor="#B41A08" />
@@ -102,7 +103,7 @@ export function Hero({ ready }: { ready: boolean }) {
         initial={{ opacity: 0, y: -14 }}
         animate={ready ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="edge absolute inset-x-0 top-0 z-20 hidden h-24 items-center md:flex"
+        className="edge absolute inset-x-0 top-0 z-20 hidden h-24 items-center md:flex md:pl-[5%]"
       >
         <Wordmark />
       </motion.div>
