@@ -13,13 +13,22 @@ export const runtime = (s: number | null) => {
 const thumbUrl = (id: string, size: 'maxres' | 'hq') =>
   `https://i.ytimg.com/vi/${id}/${size}default.jpg`
 
+const driveThumbUrl = (id: string) =>
+  `https://drive.google.com/thumbnail?id=${id}&sz=w1000`
+
 /**
- * Only hqdefault is guaranteed. maxresdefault either 404s or quietly serves
- * YouTube's 120px grey placeholder, so we watch for both and step down.
+ * YouTube only guarantees hqdefault. maxresdefault either 404s or quietly
+ * serves a 120px grey placeholder, so we watch for both and step down.
+ * Drive serves one size and needs no fallback.
  */
-function Thumb({ id, alt, small }: { id: string; alt: string; small?: boolean }) {
-  const [src, setSrc] = useState(thumbUrl(id, small ? 'hq' : 'maxres'))
-  const fallback = () => setSrc((s) => (s.includes('maxres') ? thumbUrl(id, 'hq') : s))
+function Thumb({ film, alt, small }: { film: Film; alt: string; small?: boolean }) {
+  const drive = film.source === 'drive'
+  const [src, setSrc] = useState(
+    drive ? driveThumbUrl(film.id) : thumbUrl(film.id, small ? 'hq' : 'maxres'),
+  )
+  const fallback = () => {
+    if (!drive) setSrc((s) => (s.includes('maxres') ? thumbUrl(film.id, 'hq') : s))
+  }
 
   return (
     <img
@@ -27,6 +36,7 @@ function Thumb({ id, alt, small }: { id: string; alt: string; small?: boolean })
       alt={alt}
       loading="lazy"
       decoding="async"
+      referrerPolicy="no-referrer"
       onError={fallback}
       onLoad={(e) => e.currentTarget.naturalWidth <= 120 && fallback()}
       className="h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.08]"
@@ -53,7 +63,7 @@ export function FilmCard({ film, onPlay, compact }: Props) {
       className="group block w-full text-left"
     >
       <div className="card-frame aspect-[16/10] w-full bg-ink/10">
-        <Thumb id={film.id} alt={title} small={compact} />
+        <Thumb film={film} alt={title} small={compact} />
         <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
 
         <span className="pointer-events-none absolute inset-0 grid place-items-center">

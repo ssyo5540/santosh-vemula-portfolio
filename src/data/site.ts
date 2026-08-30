@@ -26,10 +26,12 @@ export const heroSlides = manifest.hero
 
 /** Shorter labels for the four films in the featured strip. */
 export const filmDisplayTitles: Record<string, string> = {
+  iKSRc_Ld2fQ: 'Kaitlyn & Aaron',
+  '6WmkbXM5sVQ': "Navya's Seemantham",
+  '-eZpbxxDUP8': 'Subhash & Priya',
+  Qs5RUXw5Um0: 'Senthilkumar & Lakshmi',
   'Bk7i-m04Gqg': 'Sundari Parichayam',
   tY1mA_U7kOw: 'Hamsaro',
-  T8sWmoYAwoI: 'Holi Fest',
-  geIngdSgPzc: '352 Creates',
 }
 
 export const brand = {

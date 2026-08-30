@@ -48,7 +48,11 @@ export function FilmModal({ film, onClose }: { film: Film | null; onClose: () =>
           >
             <div className="aspect-video w-full overflow-hidden rounded-xl bg-black shadow-lift">
               <iframe
-                src={`https://www.youtube-nocookie.com/embed/${film.id}?autoplay=1&rel=0&modestbranding=1`}
+                src={
+                  film.source === 'drive'
+                    ? `https://drive.google.com/file/d/${film.id}/preview`
+                    : `https://www.youtube-nocookie.com/embed/${film.id}?autoplay=1&rel=0&modestbranding=1`
+                }
                 title={film.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

@@ -4,13 +4,26 @@
   */
 
 export type Film = {
+  /** YouTube video id, or the Drive file id when source is 'drive'. */
   id: string
   title: string
   tags: string[]
   seconds: number | null
+  /** Drive-hosted films thumbnail and embed differently. Defaults to YouTube. */
+  source?: 'youtube' | 'drive'
 }
 
 export const films: Film[] = [
+  { id: 'iKSRc_Ld2fQ', title: 'Kaitlyn and Aaron Wedding', tags: ['Wedding'], seconds: 3302 },
+  { id: '6WmkbXM5sVQ', title: 'Navya Seemantham Ceremony 4K', tags: ['Seemantham'], seconds: 444 },
+  { id: '-eZpbxxDUP8', title: 'Subhash and Priya Housewarming Ceremony 4k', tags: ['Housewarming'], seconds: 260 },
+  { id: 'Qs5RUXw5Um0', title: 'Journey of Senthilkumar & Lakshmi 4K', tags: ['Story'], seconds: 265 },
+  { id: 'BE_eudUXX4k', title: 'Dr Whitbeck Wedding', tags: ['Wedding'], seconds: 661 },
+  { id: 'M_1plzVqOvQ', title: 'Ravi and Pooja House Warming Ceremony 4K', tags: ['Housewarming'], seconds: 217 },
+  { id: 'EvmQ51Znblc', title: "Theju's Seemantham", tags: ['Seemantham'], seconds: 161 },
+  { id: 'dMYd77GS_dI', title: 'Senthil Kumar + Lakshmi Shashtipoorthy 4K', tags: ['Ceremony'], seconds: 352 },
+  // Hosted on Drive rather than YouTube; runtime is not exposed there.
+  { id: '1TYINtjVHRM9JyBBWCoa4bhwGo1LuHLOi', title: 'Hasini 16th Birthday 4K', tags: ['16th Birthday'], seconds: null, source: 'drive' },
   { id: 'Bk7i-m04Gqg', title: 'Sundari Parichayam Full Song Filmed in USA [ Official ] Hamsaro | Shiva Sai Teja || Klapboard', tags: ['Music', 'Drone'], seconds: 390 },
   { id: 'tY1mA_U7kOw', title: 'Hamsaro Latest Telugu Short Film Trailer - Romantic and Heart Touching Love Story, Made in USA', tags: ['Short Film', 'Drone'], seconds: 136 },
   { id: 'T8sWmoYAwoI', title: 'UF ISA Holi Fest 2017', tags: ['Event', 'Promo'], seconds: 120 },
@@ -55,5 +68,5 @@ export const films: Film[] = [
   { id: 'n9ouEOJ5pkY', title: 'Sandeep Application HUGE', tags: ['Story'], seconds: 60 },
 ]
 
-/** The four that lead the "Watch Our Stories" strip. */
+/** The four that lead the "Watch Our Stories" strip: one per core service. */
 export const featuredFilms = films.slice(0, 4)
