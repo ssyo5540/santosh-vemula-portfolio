@@ -51,7 +51,7 @@ export function Hero({ ready }: { ready: boolean }) {
   return (
     <section
       ref={root}
-      className="relative overflow-hidden pb-10 pt-14 sm:pb-14 md:pt-24"
+      className="relative overflow-hidden pb-10 pt-14 sm:pb-14 md:pt-20"
     >
       {/* Single brand-gradient sweep in the top-left, lifted from the logo's swirl. */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden>
@@ -70,7 +70,7 @@ export function Hero({ ready }: { ready: boolean }) {
           </defs>
           <path
             data-sweep="left"
-            d="M0,0 H492 C404,132 236,246 0,318 Z"
+            d="M0,0 H336 C276,92 162,172 0,222 Z"
             fill="url(#sweepL)"
           />
         </svg>
@@ -79,16 +79,6 @@ export function Hero({ ready }: { ready: boolean }) {
         <div className="absolute left-1/2 top-[48%] h-[44vw] w-[62vw] -translate-x-1/2 rounded-full bg-saffron/15 blur-[90px]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-shell" />
       </div>
-
-      {/* Brand mark only — no wordmark, no navigation. */}
-      <motion.div
-        initial={{ opacity: 0, y: -14 }}
-        animate={ready ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="edge absolute inset-x-0 top-0 z-20 hidden h-24 items-center md:flex"
-      >
-        <img src="/logo.png" alt="Pixels by Santosh Vemula" width={512} height={512} className="h-12 w-12" />
-      </motion.div>
 
       <div data-hero-copy className="edge relative z-10 flex flex-col items-center">
         <motion.div variants={enter} custom={0} initial="hidden" animate={ready ? 'show' : 'hidden'}>
