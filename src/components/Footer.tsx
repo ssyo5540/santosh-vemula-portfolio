@@ -87,7 +87,7 @@ export function Footer() {
             </h2>
 
             <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
-              Weddings, housewarmings, seemantham, graduations — if it matters to you, it is
+              Weddings, housewarmings, seemantham, graduations. If it matters to you, it is
               worth filming properly.
             </p>
 

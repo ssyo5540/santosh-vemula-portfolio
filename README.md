@@ -1,6 +1,6 @@
 # Pixels by Santosh Vemula
 
-Portfolio site for the studio — a scroll-driven, warm-toned build of the supplied
+Portfolio site for the studio. A scroll-driven, warm-toned build of the supplied
 mockup: hero coverflow, featured films, and the event-category grid, closing on the
 gradient wave and the *Real People / Real Moments / Timeless Stories* strip.
 
@@ -26,7 +26,7 @@ npm run preview    # serve the built bundle
 
 ## Palette
 
-Every colour is sampled from the brand mark (`public/logo.png`) — the swirl runs from
+Every colour is sampled from the brand mark (`public/logo.png`). The swirl runs from
 saffron through orange into deep maroon, and that gradient is reused for the hero
 sweep, the footer wave, and every accent rule.
 
@@ -53,12 +53,12 @@ Two libraries, split by what each is good at.
 
 **GSAP** (with `ScrollTrigger` and `SplitText`) owns anything tied to scroll position:
 
-- `SectionHeading` — headlines split into words and swept up behind a mask; the eyebrow
+- `SectionHeading`: headlines split into words and swept up behind a mask; the eyebrow
   rule draws itself out from the left.
-- `Hero` — the top-left sweep parallaxes out on scrub while the copy recedes; a slow
+- `Hero`: the top-left sweep parallaxes out on scrub while the copy recedes; a slow
   idle float keeps the page alive when it is sitting still.
-- `Categories` — a grid-aware stagger, plus a per-card cover parallax inside each frame.
-- `Footer` — the wave is a shell-coloured cut-out whose path is morphed on `attr: { d }`,
+- `Categories`: a grid-aware stagger, plus a per-card cover parallax inside each frame.
+- `Footer`: the wave is a shell-coloured cut-out whose path is morphed on `attr: { d }`,
   so the gradient appears to rise into place.
 
 **Framer Motion** owns state and gesture:
@@ -77,8 +77,8 @@ so smoothing and ScrollTrigger never disagree about where the page is.
 
 Everything editorial lives in two files.
 
-- `src/data/site.ts` — brand name, tagline, credo, contact details, hero running order.
-- `src/data/videos.ts` — the YouTube catalogue (ids, titles, runtimes, tags). Titles and
+- `src/data/site.ts`: brand name, tagline, credo, contact details, hero running order.
+- `src/data/videos.ts`: the YouTube catalogue (ids, titles, runtimes, tags). Titles and
   runtimes were read from YouTube; thumbnails are served from `i.ytimg.com`, and the
   player embeds via `youtube-nocookie.com`.
 
@@ -95,8 +95,8 @@ SOURCE_ROOT="/path/to/public_html" npm run assets
 
 ## Deploying
 
-The build is a static bundle in `dist/` (`index.html` plus `videos/index.html`) — any
-static host will do (Netlify, Vercel, Cloudflare Pages, S3). If you deploy to a GitHub
+The build is a static bundle in `dist/` (`index.html` plus `videos/index.html`). Any
+static host will do: Netlify, Vercel, Cloudflare Pages, S3. If you deploy to a GitHub
 Pages project path rather than a domain root, set `base: '/<repo-name>/'` in
 `vite.config.ts` first; the internal links pick that up automatically.
 
@@ -113,7 +113,7 @@ Application code here is the studio's. Third-party runtime dependencies:
 | vite, postcss, autoprefixer | MIT                                            |
 | typescript      | Apache-2.0                                                 |
 | sharp (build only) | Apache-2.0                                              |
-| gsap            | GSAP Standard "no charge" licence — see https://gsap.com/standard-license |
+| gsap            | GSAP Standard "no charge" licence, see https://gsap.com/standard-license |
 
 GSAP is not MIT. It ships under Webflow's standard licence, which covers this use at no
 charge and (from v3.13) includes the formerly Club-only plugins such as `SplitText`.

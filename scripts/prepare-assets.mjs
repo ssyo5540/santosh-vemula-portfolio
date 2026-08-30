@@ -3,7 +3,7 @@
  *
  * Reads the curated originals out of the legacy `public_html` tree, writes
  * responsive WebP renditions into `public/gallery`, and emits
- * `src/data/gallery.json` — a manifest carrying dimensions plus a tiny inline
+ * `src/data/gallery.json`, a manifest carrying dimensions plus a tiny inline
  * blur placeholder for every frame so the site can blur-up instead of popping.
  *
  * Re-run with:  SOURCE_ROOT="/path/to/public_html" node scripts/prepare-assets.mjs
@@ -29,7 +29,7 @@ const COLLECTIONS = [
   {
     slug: 'weddings',
     title: 'Weddings',
-    blurb: 'Muhurtham to mangalsutra — the whole day, told the way it felt.',
+    blurb: 'Muhurtham to mangalsutra, the whole day told the way it felt.',
     icon: 'rings',
     src: [
       'main/2.jpeg',
@@ -57,7 +57,7 @@ const COLLECTIONS = [
   {
     slug: 'housewarmings',
     title: 'Housewarmings',
-    blurb: 'Gruhapravesam — first lamp, first meal, first memory.',
+    blurb: 'Gruhapravesam: first lamp, first meal, first memory.',
     icon: 'home',
     src: [
       'housewarmings/19.jpg',
@@ -99,7 +99,7 @@ const COLLECTIONS = [
   {
     slug: 'half-saree',
     title: 'Half Saree',
-    blurb: 'Langa voni ceremonies — colour, ritual and a little swagger.',
+    blurb: 'Langa voni ceremonies: colour, ritual and a little swagger.',
     icon: 'sparkle',
     src: [
       'half-saree/2.jpg',
@@ -127,7 +127,7 @@ const COLLECTIONS = [
   {
     slug: 'matrimony',
     title: 'Matrimony Photoshoots',
-    blurb: 'Portraits that actually look like you — for the profile that matters.',
+    blurb: 'Portraits that actually look like you, for the profile that matters.',
     icon: 'ring',
     src: [
       'matrimony-photoshoots/1.jpg',
@@ -172,7 +172,7 @@ async function render(srcFile, slug, index) {
     }),
   )
 
-  // 20px blur seed, inlined as a data URI — cheap enough to ship in the bundle.
+  // 20px blur seed, inlined as a data URI, cheap enough to ship in the bundle.
   const lqip = await sharp(srcFile, { failOn: 'none' })
     .rotate()
     .resize({ width: 20 })

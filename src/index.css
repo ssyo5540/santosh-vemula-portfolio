@@ -120,7 +120,7 @@
   }
 }
 
-/* GSAP SplitText targets — set before the timelines run so nothing flashes. */
+/* GSAP SplitText targets, set before the timelines run so nothing flashes. */
 .split-line {
   overflow: hidden;
   display: block;

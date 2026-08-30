@@ -78,7 +78,7 @@ export default function VideosPage() {
           <SectionHeading eyebrow="The Full Catalogue" title="Every Film We've Made" />
 
           <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-ink-soft">
-            {films.length} films — wedding and event stories, short films, music videos and
+            {films.length} films: wedding and event stories, short films, music videos and
             commercial work. Filter by kind, then tap any frame to watch.
           </p>
 
