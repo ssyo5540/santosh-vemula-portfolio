@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { MotionConfig } from 'framer-motion'
+import { Backdrop } from './components/Backdrop'
 import { Preloader } from './components/Preloader'
 import { ScrollProgress } from './components/ScrollProgress'
 import { Hero } from './components/Hero'
@@ -45,6 +46,7 @@ export default function App() {
   return (
     /* reducedMotion="user" lets the OS setting switch Framer to opacity-only. */
     <MotionConfig reducedMotion="user">
+      <Backdrop />
       <Preloader done={ready} />
       <ScrollProgress />
 

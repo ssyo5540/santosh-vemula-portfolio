@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { MotionConfig, motion } from 'framer-motion'
+import { Backdrop } from '../components/Backdrop'
 import { Preloader } from '../components/Preloader'
 import { ScrollProgress } from '../components/ScrollProgress'
 import { SectionHeading } from '../components/SectionHeading'
@@ -36,6 +37,7 @@ export default function VideosPage() {
 
   return (
     <MotionConfig reducedMotion="user">
+      <Backdrop />
       <Preloader done={ready} />
       <ScrollProgress />
 

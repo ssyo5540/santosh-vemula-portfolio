@@ -17,12 +17,29 @@ const SOURCE_ROOT =
   process.env.SOURCE_ROOT ??
   '/Users/satwikrudra/Documents/Personal/SVP/public_html (1)'
 
+/** Hero frames come from their own folder, supplied separately. */
+const HERO_ROOT =
+  process.env.HERO_ROOT ?? '/Users/satwikrudra/Documents/Personal/SVP/carousel-originals'
+
 const PHOTOS = path.join(SOURCE_ROOT, 'events', 'photos')
 const OUT_DIR = path.resolve('public/gallery')
 const MANIFEST = path.resolve('src/data/gallery.json')
 
 const WIDTHS = [800, 1600]
 const QUALITY = 78
+
+/** Running order for the hero coverflow. */
+const HERO = [
+  '1.jpg',
+  'DSC08950.jpg',
+  'Main.jpg',
+  '4.jpg',
+  'DSC04249.jpg',
+  'Main (1).jpg',
+  'DSC00193.jpg',
+  '341A0491.jpg',
+  'DSC09625.jpg',
+]
 
 /** Curated running order. First entry of each set doubles as the cover frame. */
 const COLLECTIONS = [
@@ -215,7 +232,20 @@ async function main() {
     collections.push({ ...rest, photos })
   }
 
-  await writeFile(MANIFEST, JSON.stringify({ collections }, null, 2) + '\n')
+  await mkdir(path.join(OUT_DIR, 'hero'), { recursive: true })
+  const hero = []
+  for (const [i, name] of HERO.entries()) {
+    const file = path.join(HERO_ROOT, name)
+    if (!existsSync(file)) {
+      console.warn(`  ! missing hero/${name}`)
+      continue
+    }
+    hero.push(await render(file, 'hero', i + 1))
+    process.stdout.write(`\r  hero ${hero.length}/${HERO.length}   `)
+  }
+  console.log(`\r  ${'hero'.padEnd(18)} ${hero.length} frames`)
+
+  await writeFile(MANIFEST, JSON.stringify({ collections, hero }, null, 2) + '\n')
   console.log(`\nWrote ${MANIFEST}`)
 }
 

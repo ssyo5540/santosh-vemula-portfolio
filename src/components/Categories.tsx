@@ -10,9 +10,6 @@ export function Categories() {
   const root = useRef<HTMLElement>(null)
   const [open, setOpen] = useState<Collection | null>(null)
 
-  const grid = collections.slice(0, 8)
-  const feature = collections[8]
-
   useGSAP(
     () => {
       if (prefersReducedMotion()) return
@@ -22,7 +19,7 @@ export function Categories() {
         opacity: 0,
         duration: 1.1,
         ease: ease.expo,
-        stagger: { each: 0.08, grid: [2, 4], from: 'start' },
+        stagger: { each: 0.08, grid: [3, 3], from: 'start' },
         scrollTrigger: { trigger: '[data-category-grid]', start: 'top 84%' },
       })
 
@@ -48,18 +45,12 @@ export function Categories() {
 
       <div
         data-category-grid
-        className="mt-10 grid grid-cols-1 gap-4 xs:grid-cols-2 lg:grid-cols-4 lg:gap-5"
+        className="mt-10 grid grid-cols-1 gap-4 xs:grid-cols-2 lg:grid-cols-3 lg:gap-5"
       >
-        {grid.map((c) => (
+        {collections.map((c) => (
           <CategoryCard key={c.slug} collection={c} onOpen={setOpen} />
         ))}
       </div>
-
-      {feature && (
-        <div className="mt-4 lg:mt-5">
-          <CategoryCard collection={feature} onOpen={setOpen} wide />
-        </div>
-      )}
 
       <Lightbox collection={open} onClose={() => setOpen(null)} />
     </section>

@@ -1,33 +1,50 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, type PanInfo } from 'framer-motion'
+import { motion, type PanInfo } from 'framer-motion'
 import { Frame } from './Frame'
 import { ChevronLeft, ChevronRight } from './icons'
 import { heroSlides } from '../data/site'
 
 const AUTOPLAY_MS = 4800
 
-/** Depth, rotation and scale for a card sitting `offset` places from centre. */
-const layout = (offset: number) => {
+/**
+ * Depth, rotation and scale for a card sitting `offset` places from centre.
+ * The spread widens on desktop so the ring reaches close to the full viewport;
+ * phones keep it tighter, or the outer cards fall off-screen entirely.
+ */
+const layout = (offset: number, wide: boolean) => {
   const dir = Math.sign(offset)
   const step = Math.abs(offset)
-  if (step === 0) return { x: '0%', z: 0, rotateY: 0, scale: 1, opacity: 1, zIndex: 40 }
-  if (step === 1)
-    return { x: `${dir * 78}%`, z: -170, rotateY: -dir * 32, scale: 0.82, opacity: 1, zIndex: 30 }
+  const near = wide ? 88 : 76
+  const far = wide ? 156 : 132
+
+  const [x, z, rot, scale, opacity, zIndex] =
+    step === 0
+      ? [0, 0, 0, 1, 1, 40]
+      : step === 1
+        ? [dir * near, -170, -dir * 30, 0.84, 1, 30]
+        : [dir * far, -340, -dir * 40, 0.66, 0.8, 20]
+
   return {
-    x: `${dir * 134}%`,
-    z: -340,
-    rotateY: -dir * 42,
-    scale: 0.64,
-    opacity: 0.78,
-    zIndex: 20,
+    opacity,
+    zIndex,
+    transform: `translateX(${x}%) translateZ(${z}px) scale(${scale}) rotateY(${rot}deg)`,
   }
 }
 
 export function HeroCarousel() {
   const count = heroSlides.length
-  const [index, setIndex] = useState(2) // open on the wedding frame
+  const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
+  const [wide, setWide] = useState(true)
   const stage = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)')
+    const sync = () => setWide(mq.matches)
+    sync()
+    mq.addEventListener('change', sync)
+    return () => mq.removeEventListener('change', sync)
+  }, [])
 
   const go = useCallback((delta: number) => setIndex((i) => (i + delta + count) % count), [count])
 
@@ -48,9 +65,9 @@ export function HeroCarousel() {
   }, [go])
 
   const onDragEnd = (_: unknown, info: PanInfo) => {
-    const throw_ = info.offset.x + info.velocity.x * 0.18
-    if (throw_ < -60) go(1)
-    else if (throw_ > 60) go(-1)
+    const thrown = info.offset.x + info.velocity.x * 0.18
+    if (thrown < -60) go(1)
+    else if (thrown > 60) go(-1)
   }
 
   /** Shortest signed distance from the active card, so the ring wraps cleanly. */
@@ -76,8 +93,8 @@ export function HeroCarousel() {
         role="group"
         aria-roledescription="carousel"
         aria-label="Selected frames"
-        className="relative mx-auto flex h-[clamp(19rem,31vw,27rem)] items-center justify-center outline-none"
-        style={{ perspective: '1700px' }}
+        className="relative mx-auto flex h-[clamp(21rem,34vw,32rem)] items-center justify-center outline-none"
+        style={{ perspective: '2000px' }}
       >
         <motion.div
           drag="x"
@@ -85,21 +102,23 @@ export function HeroCarousel() {
           dragElastic={0.14}
           onDragStart={() => setPaused(true)}
           onDragEnd={onDragEnd}
-          className="preserve-3d relative aspect-[4/5] w-[clamp(11rem,23vw,20rem)] cursor-grab active:cursor-grabbing"
+          className="preserve-3d relative aspect-[4/5] w-[clamp(13rem,26vw,24rem)] cursor-grab active:cursor-grabbing"
         >
-          {heroSlides.map((slide, i) => {
+          {heroSlides.map((photo, i) => {
             const offset = offsetOf(i)
             if (Math.abs(offset) > 2) return null
-            const t = layout(offset)
+            const t = layout(offset, wide)
             const active = offset === 0
 
             return (
-              <motion.figure
-                key={slide.caption}
-                className="preserve-3d backface-hidden absolute inset-0"
-                initial={false}
-                animate={t}
-                transition={{ type: 'spring', stiffness: 120, damping: 22, mass: 0.9 }}
+              <figure
+                key={photo.src}
+                className="preserve-3d backface-hidden absolute inset-0 will-change-transform"
+                style={{
+                  ...t,
+                  transition:
+                    'transform 760ms cubic-bezier(0.22, 1, 0.36, 1), opacity 500ms ease',
+                }}
                 onClick={() => !active && go(offset)}
                 aria-hidden={!active}
               >
@@ -109,33 +128,19 @@ export function HeroCarousel() {
                   }`}
                 >
                   <Frame
-                    photo={slide.photo}
-                    alt={`${slide.caption} photography by Santosh Vemula`}
-                    sizes="(max-width: 640px) 60vw, 25vw"
+                    photo={photo}
+                    alt="Photograph by Santosh Vemula"
+                    sizes="(max-width: 768px) 60vw, 26vw"
                     priority={Math.abs(offset) <= 1}
                   />
+                  {/* Only the off-centre frames are shaded, so the active one stays clean. */}
                   <span
-                    className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/0 to-ink/0 transition-opacity duration-500 ${
-                      active ? 'opacity-100' : 'opacity-40'
+                    className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/35 to-transparent transition-opacity duration-500 ${
+                      active ? 'opacity-0' : 'opacity-70'
                     }`}
                   />
-                  <AnimatePresence>
-                    {active && (
-                      <motion.figcaption
-                        initial={{ opacity: 0, y: 14 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -8 }}
-                        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                        className="absolute inset-x-0 bottom-0 p-4 text-left sm:p-5"
-                      >
-                        <span className="text-[0.6rem] font-bold uppercase tracking-eyebrow text-saffron">
-                          {slide.caption}
-                        </span>
-                      </motion.figcaption>
-                    )}
-                  </AnimatePresence>
                 </div>
-              </motion.figure>
+              </figure>
             )
           })}
         </motion.div>
@@ -144,20 +149,18 @@ export function HeroCarousel() {
         <NavButton side="right" onClick={() => go(1)} />
       </div>
 
-      <div className="mt-6 flex items-center justify-center gap-2.5">
-        {heroSlides.map((slide, i) => (
+      <div className="mt-7 flex items-center justify-center gap-2.5">
+        {heroSlides.map((photo, i) => (
           <button
-            key={slide.caption}
+            key={photo.src}
             onClick={() => setIndex(i)}
-            aria-label={`Show ${slide.caption}`}
+            aria-label={`Show frame ${i + 1}`}
             aria-current={i === index}
             className="group grid h-5 w-5 place-items-center"
           >
             <span
               className={`block rounded-full transition-all duration-500 ${
-                i === index
-                  ? 'h-2 w-2 bg-swirl'
-                  : 'h-1.5 w-1.5 bg-sand group-hover:bg-ember/60'
+                i === index ? 'h-2 w-2 bg-swirl' : 'h-1.5 w-1.5 bg-sand group-hover:bg-ember/60'
               }`}
             />
           </button>
@@ -174,7 +177,7 @@ function NavButton({ side, onClick }: { side: 'left' | 'right'; onClick: () => v
       onClick={onClick}
       aria-label={side === 'left' ? 'Previous frame' : 'Next frame'}
       className={`absolute top-1/2 z-50 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-white/85 text-ink shadow-frame backdrop-blur transition duration-300 hover:scale-110 hover:bg-white hover:text-vermilion ${
-        side === 'left' ? 'left-1 sm:left-6 lg:left-[6%]' : 'right-1 sm:right-6 lg:right-[6%]'
+        side === 'left' ? 'left-1 sm:left-3' : 'right-1 sm:right-3'
       }`}
     >
       <Icon className="h-5 w-5" />

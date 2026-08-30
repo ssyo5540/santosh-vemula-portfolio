@@ -28,7 +28,7 @@ export function FeaturedFilms() {
   )
 
   return (
-    <section ref={root} id="films" className="edge relative bg-linen/45 py-20 sm:py-28">
+    <section ref={root} id="films" className="edge relative bg-gradient-to-b from-transparent via-linen/50 to-transparent py-20 sm:py-28">
       <SectionHeading
         eyebrow="Featured Videos"
         title="Watch Our Stories"
