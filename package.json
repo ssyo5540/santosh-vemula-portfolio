@@ -18,6 +18,7 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
+    "@types/node": "^26.4.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^6.1.1",
@@ -28,5 +29,5 @@
     "typescript": "^7.0.2",
     "vite": "^8.2.2"
   },
-  "description": "Portfolio site for Pixels by Santosh Vemula \u2014 wedding and event films."
+  "description": "Portfolio site for Pixels by Santosh Vemula — wedding and event films."
 }

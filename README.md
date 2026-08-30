@@ -1,10 +1,21 @@
 # Pixels by Santosh Vemula
 
-Single-page portfolio for the studio — a scroll-driven, warm-toned site built to the
-supplied mockup: hero coverflow, featured films, and the event-category grid, closing
-on the gradient wave and the *Real People / Real Moments / Timeless Stories* strip.
+Portfolio site for the studio — a scroll-driven, warm-toned build of the supplied
+mockup: hero coverflow, featured films, and the event-category grid, closing on the
+gradient wave and the *Real People / Real Moments / Timeless Stories* strip.
 
-There is no navigation bar by design; the only chrome is the brand lockup.
+There is no navigation bar by design. Two pages:
+
+| Page        | Route      | Source                       |
+| ----------- | ---------- | ---------------------------- |
+| Home        | `/`        | `src/App.tsx`                |
+| All films   | `/videos/` | `src/pages/VideosPage.tsx`   |
+
+Both are real HTML entry points in the Vite build (`index.html` and
+`videos/index.html`), so deep links work on any static host with no SPA fallback
+rule to configure. They share the same JS chunks, so moving between them is a warm
+cache hit. Links are built off `import.meta.env.BASE_URL` (`src/lib/paths.ts`), so
+they survive a sub-path deploy.
 
 ```bash
 npm install
@@ -17,7 +28,7 @@ npm run preview    # serve the built bundle
 
 Every colour is sampled from the brand mark (`public/logo.png`) — the swirl runs from
 saffron through orange into deep maroon, and that gradient is reused for the hero
-sweeps, the footer wave, and every accent rule.
+sweep, the footer wave, and every accent rule.
 
 | Token       | Hex       | Where it lands                       |
 | ----------- | --------- | ------------------------------------ |
@@ -44,7 +55,7 @@ Two libraries, split by what each is good at.
 
 - `SectionHeading` — headlines split into words and swept up behind a mask; the eyebrow
   rule draws itself out from the left.
-- `Hero` — the two corner sweeps parallax apart on scrub while the copy recedes; a slow
+- `Hero` — the top-left sweep parallaxes out on scrub while the copy recedes; a slow
   idle float keeps the page alive when it is sitting still.
 - `Categories` — a grid-aware stagger, plus a per-card cover parallax inside each frame.
 - `Footer` — the wave is a shell-coloured cut-out whose path is morphed on `attr: { d }`,
@@ -53,7 +64,7 @@ Two libraries, split by what each is good at.
 **Framer Motion** owns state and gesture:
 
 - The hero coverflow (spring-driven 3D transforms, drag-to-throw, autoplay, keyboard).
-- The film library expansion, filter chips, and `layout` reflow.
+- The film library's filter chips and `layout` reflow on the `/videos/` page.
 - Modals, the lightbox, the preloader curtain and the scroll-progress hairline.
 
 **Lenis** provides inertial scrolling, driven off the GSAP ticker (`src/hooks/useSmoothScroll.ts`)
@@ -84,9 +95,10 @@ SOURCE_ROOT="/path/to/public_html" npm run assets
 
 ## Deploying
 
-The build is a static bundle in `dist/` — any static host will do (Netlify, Vercel,
-Cloudflare Pages, S3). If you deploy to a GitHub Pages project path rather than a
-domain root, set `base: '/<repo-name>/'` in `vite.config.ts` first.
+The build is a static bundle in `dist/` (`index.html` plus `videos/index.html`) — any
+static host will do (Netlify, Vercel, Cloudflare Pages, S3). If you deploy to a GitHub
+Pages project path rather than a domain root, set `base: '/<repo-name>/'` in
+`vite.config.ts` first; the internal links pick that up automatically.
 
 ## Licences
 

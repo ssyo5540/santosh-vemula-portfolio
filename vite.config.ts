@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -6,6 +7,13 @@ export default defineConfig({
   build: {
     target: 'es2020',
     rollupOptions: {
+      // Two real pages: the home page and the film catalogue at /videos/.
+      // Emitting an actual videos/index.html keeps deep links working on any
+      // static host, with no SPA fallback rule to configure.
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        videos: fileURLToPath(new URL('./videos/index.html', import.meta.url)),
+      },
       output: {
         // Keep the animation libraries in their own chunks so the shell paints first.
         manualChunks(id) {
