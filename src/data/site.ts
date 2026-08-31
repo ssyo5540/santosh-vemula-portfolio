@@ -24,7 +24,7 @@ export const collections = manifest.collections
 /** Frames that ride the hero coverflow, in running order. */
 export const heroSlides = manifest.hero
 
-/** Shorter labels for the four films in the featured strip. */
+/** Shorter labels for films in the featured strip. */
 export const filmDisplayTitles: Record<string, string> = {
   iKSRc_Ld2fQ: 'Kaitlyn & Aaron',
   '6WmkbXM5sVQ': "Navya's Seemantham",

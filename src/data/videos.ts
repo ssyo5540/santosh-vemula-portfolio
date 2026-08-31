@@ -68,5 +68,22 @@ export const films: Film[] = [
   { id: 'n9ouEOJ5pkY', title: 'Sandeep Application HUGE', tags: ['Story'], seconds: 60 },
 ]
 
-/** The four that lead the "Watch Our Stories" strip: one per core service. */
-export const featuredFilms = films.slice(0, 4)
+/**
+ * The films the site is showing right now, in running order. Everything else
+ * stays in `films` for the full catalogue but is held back from the home page
+ * for the moment; add an id here to bring a film forward again.
+ */
+const featuredIds = [
+  'BE_eudUXX4k', // Dr Whitbeck Wedding
+  'iKSRc_Ld2fQ', // Kaitlyn and Aaron Wedding
+  'Qs5RUXw5Um0', // Journey of Senthilkumar & Lakshmi
+  '6WmkbXM5sVQ', // Navya Seemantham
+  '-eZpbxxDUP8', // Subhash and Priya Housewarming
+  '1TYINtjVHRM9JyBBWCoa4bhwGo1LuHLOi', // Hasini 16th Birthday (Drive)
+  'EvmQ51Znblc', // Theju's Seemantham
+  'M_1plzVqOvQ', // Ravi and Pooja House Warming
+  'dMYd77GS_dI', // Senthil Kumar + Lakshmi Shashtipoorthy
+]
+
+/** The strip that leads "Watch Our Stories", in the order listed above. */
+export const featuredFilms = featuredIds.map((id) => films.find((f) => f.id === id)!)
