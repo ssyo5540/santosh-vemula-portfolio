@@ -193,18 +193,18 @@
         {
           "src": "/gallery/birthdays/1-1600.webp",
           "srcset": "/gallery/birthdays/1-800.webp 800w, /gallery/birthdays/1-1600.webp 1600w",
-          "width": 1667,
-          "height": 2500,
-          "ratio": 0.6668,
-          "blur": "data:image/webp;base64,UklGRhQBAABXRUJQVlA4IAgBAABwBgCdASoUAB4APu1kqU2ppaQiMAgBMB2JbACdMoSCv6y4CZSS6ACbUaT0OwLdpWWwztbLRbd8laCKT9AA8bYVnSPWDXKThQsh/8mlo9dlhlGeSzFp7yln8J8bymRCUdkwrdgNzUOsOMQmPDCFuUYss4CyisezVSWf7a3fWqvVfd2MlqRFQdZl4YIMv4j7OmPvKciCYiM2ndbYc6GeU3mlgGtW18G7JWUvNVd6pyagJ4W4q79vf3wX4dbu8Kr2gj5SNfcOMTcgPFHeEuLrJW4G/Mtillfy1plqKiXRayncnweawnsxX+EBHipC+ZOaSwwJRab79pRMFm7bEMlHxwvmWoFJHB+AAAA="
-        },
-        {
-          "src": "/gallery/birthdays/2-1600.webp",
-          "srcset": "/gallery/birthdays/2-800.webp 800w, /gallery/birthdays/2-1600.webp 1600w",
           "width": 2500,
           "height": 1667,
           "ratio": 1.4997,
           "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdMoADS9NHkR988L64AAD+l2Tz5/HqLr5JZzkqNzhwGjcoh9phfiKyzr06coCgf9Dl6Pav04Tbg0jCz5vOjRvyrjDGusRxPlTrFZLA51K6YwJeG948fBSP9BkbK7ecbksquriLPQnOtelRRxbukG6l0CDLhV3OCG+zAAA="
+        },
+        {
+          "src": "/gallery/birthdays/2-1600.webp",
+          "srcset": "/gallery/birthdays/2-800.webp 800w, /gallery/birthdays/2-1600.webp 1600w",
+          "width": 1667,
+          "height": 2500,
+          "ratio": 0.6668,
+          "blur": "data:image/webp;base64,UklGRhQBAABXRUJQVlA4IAgBAABwBgCdASoUAB4APu1kqU2ppaQiMAgBMB2JbACdMoSCv6y4CZSS6ACbUaT0OwLdpWWwztbLRbd8laCKT9AA8bYVnSPWDXKThQsh/8mlo9dlhlGeSzFp7yln8J8bymRCUdkwrdgNzUOsOMQmPDCFuUYss4CyisezVSWf7a3fWqvVfd2MlqRFQdZl4YIMv4j7OmPvKciCYiM2ndbYc6GeU3mlgGtW18G7JWUvNVd6pyagJ4W4q79vf3wX4dbu8Kr2gj5SNfcOMTcgPFHeEuLrJW4G/Mtillfy1plqKiXRayncnweawnsxX+EBHipC+ZOaSwwJRab79pRMFm7bEMlHxwvmWoFJHB+AAAA="
         },
         {
           "src": "/gallery/birthdays/3-1600.webp",

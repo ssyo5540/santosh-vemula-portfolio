@@ -55,7 +55,6 @@ const HERO = [
  * ordered list.
  */
 const COLLECTIONS = [
-  ,
   {
     slug: 'engagement',
     title: 'Engagement',
@@ -87,15 +86,16 @@ const COLLECTIONS = [
       '1 Engagement/DSC09971.jpg',
     ],
   },
-  ,
   {
     slug: 'birthdays',
     title: 'Birthdays',
     blurb: 'First candles through sixteenth, cake smashes to full-scale parties.',
     icon: 'cake',
     src: [
-      'birthdays/2.jpg',
+      // Landscape leads: the portrait frame below loses its subject's head
+      // once it is cropped to the card's 4:3 and zoomed by the parallax.
       'birthdays/Main.jpg',
+      'birthdays/2.jpg',
       'birthdays/5.jpg',
       'birthdays/1.jpg',
       'birthdays/6.jpg',
@@ -116,7 +116,6 @@ const COLLECTIONS = [
       'drive:9 16th Birthday/DSC09369.jpg',
     ],
   },
-  ,
   {
     slug: 'housewarmings',
     title: 'Housewarmings',
@@ -206,7 +205,6 @@ const COLLECTIONS = [
       'drive:3 Housewarmings/DSC08950.jpg',
     ],
   },
-  ,
   {
     slug: 'seemantham',
     title: 'Seemantham',
@@ -253,7 +251,6 @@ const COLLECTIONS = [
       'drive:5 Baby Showers-Seemantham/DSC09998.jpg',
     ],
   },
-  ,
   {
     slug: 'half-saree',
     title: 'Half Saree',
@@ -282,7 +279,6 @@ const COLLECTIONS = [
       'wedding/6.jpg',
     ],
   },
-  ,
   {
     slug: 'graduations',
     title: 'Graduations',
@@ -303,7 +299,6 @@ const COLLECTIONS = [
       '7 Graduation/1.jpg',
     ],
   },
-  ,
   {
     slug: 'matrimony',
     title: 'Matrimony Photoshoots',
@@ -324,7 +319,6 @@ const COLLECTIONS = [
       'drive:8 Matrimony Photoshoots/DSC09329.jpg',
     ],
   },
-  ,
   {
     slug: 'family-portraits',
     title: 'Family Portraits',
