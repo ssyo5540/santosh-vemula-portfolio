@@ -9,7 +9,7 @@
  * Re-run with:  SOURCE_ROOT="/path/to/public_html" node scripts/prepare-assets.mjs
  */
 import { mkdir, writeFile, rm } from 'node:fs/promises'
-import { existsSync } from 'node:fs'
+import { existsSync, readdirSync } from 'node:fs'
 import path from 'node:path'
 import sharp from 'sharp'
 
@@ -52,6 +52,11 @@ const HERO = [
  * can override it again with a `drive:` or `legacy:` prefix, which is what
  * lets Birthdays mix the older shoots with the newer Drive export in one
  * ordered list.
+ *
+ * An entry ending in `/` names a folder rather than a file and pulls in every
+ * image inside it, so a whole Drive set can be added without listing each
+ * frame. Files named explicitly earlier are not repeated, which keeps a
+ * hand-picked cover frame at the front of an otherwise wholesale folder.
  */
 const COLLECTIONS = [
   {
@@ -111,6 +116,8 @@ const COLLECTIONS = [
       'housewarmings/7.jpg',
       'housewarmings/14.jpg',
       'housewarmings/18.jpg',
+      // The rest of the set, straight from the Drive export.
+      'drive:Housewarming/',
     ],
   },
   {
@@ -125,6 +132,9 @@ const COLLECTIONS = [
       'baby-showers-seemantham/30.jpg',
       'baby-showers-seemantham/29.jpg',
       'baby-showers-seemantham/1.jpg',
+      // The rest of the set, straight from the Drive export.
+      'drive:Baby Shower/',
+      'drive:Seemantham/',
     ],
   },
   {
@@ -201,6 +211,8 @@ const COLLECTIONS = [
       'matrimony-photoshoots/3.jpg',
       'matrimony-photoshoots/5.jpg',
       'matrimony-photoshoots/7.jpg',
+      // The rest of the set, straight from the Drive export.
+      'drive:Matrimony/',
     ],
   },
   {
@@ -224,6 +236,59 @@ function resolveSrc(rel, collectionRoot) {
   if (rel.startsWith('drive:')) return path.join(DRIVE_ROOT, rel.slice(6))
   if (rel.startsWith('legacy:')) return path.join(PHOTOS, rel.slice(7))
   return path.join(collectionRoot ?? PHOTOS, rel)
+}
+
+const IMAGE = /\.(jpe?g|png|webp|tiff?|heic)$/i
+
+/** Compare folder names loosely: case, spacing and punctuation all vary. */
+const key = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '')
+
+/**
+ * Find a folder by exact path, else by name alone. The Drive export prefixes
+ * each folder with a running number that shifts as sets are added, so
+ * `drive:Housewarming/` still finds `2 House Warming`.
+ */
+function resolveDir(dir) {
+  if (existsSync(dir)) return dir
+  const parent = path.dirname(dir)
+  if (!existsSync(parent)) return null
+  const want = key(path.basename(dir))
+  const hit = readdirSync(parent, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .find((e) => key(e.name).replace(/^\d+/, '').includes(want))
+  return hit ? path.join(parent, hit.name) : null
+}
+
+/** Turn a collection's `src` list into real files, expanding any folders. */
+function expandSrc(list, collectionRoot) {
+  const files = []
+  const seen = new Set()
+  const add = (file) => {
+    if (seen.has(file)) return
+    seen.add(file)
+    files.push(file)
+  }
+
+  for (const rel of list) {
+    if (!rel.endsWith('/')) {
+      const file = resolveSrc(rel, collectionRoot)
+      if (existsSync(file)) add(file)
+      else console.warn(`  ! missing ${rel}`)
+      continue
+    }
+
+    const dir = resolveDir(resolveSrc(rel.slice(0, -1), collectionRoot))
+    if (!dir) {
+      console.warn(`  ! no folder matching ${rel}`)
+      continue
+    }
+    readdirSync(dir)
+      .filter((n) => IMAGE.test(n))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      .forEach((n) => add(path.join(dir, n)))
+  }
+
+  return files
 }
 
 async function render(srcFile, slug, index) {
@@ -273,14 +338,10 @@ async function main() {
   for (const c of COLLECTIONS) {
     await mkdir(path.join(OUT_DIR, c.slug), { recursive: true })
     const photos = []
-    for (const [i, rel] of c.src.entries()) {
-      const file = resolveSrc(rel, c.root)
-      if (!existsSync(file)) {
-        console.warn(`  ! missing ${rel}`)
-        continue
-      }
-      photos.push(await render(file, c.slug, i + 1))
-      process.stdout.write(`\r  ${c.slug} ${photos.length}/${c.src.length}   `)
+    const sources = expandSrc(c.src, c.root)
+    for (const file of sources) {
+      photos.push(await render(file, c.slug, photos.length + 1))
+      process.stdout.write(`\r  ${c.slug} ${photos.length}/${sources.length}   `)
     }
     console.log(`\r  ${c.slug.padEnd(18)} ${photos.length} frames`)
     const { src, root, ...rest } = c
