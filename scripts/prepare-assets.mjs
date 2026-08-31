@@ -9,6 +9,7 @@
  * Re-run with:  SOURCE_ROOT="/path/to/public_html" node scripts/prepare-assets.mjs
  */
 import { mkdir, writeFile, rm } from 'node:fs/promises'
+import { pathToFileURL } from 'node:url'
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 import sharp from 'sharp'
@@ -54,20 +55,7 @@ const HERO = [
  * ordered list.
  */
 const COLLECTIONS = [
-  {
-    slug: 'weddings',
-    title: 'Weddings',
-    blurb: 'Muhurtham to mangalsutra, the whole day told the way it felt.',
-    icon: 'rings',
-    src: [
-      'main/2.jpeg',
-      'wedding/9.jpg',
-      'wedding/8.jpg',
-      'wedding/4.jpg',
-      'wedding/5.jpg',
-      'wedding/6.jpg',
-    ],
-  },
+  ,
   {
     slug: 'engagement',
     title: 'Engagement',
@@ -99,6 +87,36 @@ const COLLECTIONS = [
       '1 Engagement/DSC09971.jpg',
     ],
   },
+  ,
+  {
+    slug: 'birthdays',
+    title: 'Birthdays',
+    blurb: 'First candles through sixteenth, cake smashes to full-scale parties.',
+    icon: 'cake',
+    src: [
+      'birthdays/2.jpg',
+      'birthdays/Main.jpg',
+      'birthdays/5.jpg',
+      'birthdays/1.jpg',
+      'birthdays/6.jpg',
+      'birthdays/3.jpg',
+      'drive:9 16th Birthday/DSC09879.jpg',
+      'drive:9 16th Birthday/DSC00077.jpg',
+      'drive:9 16th Birthday/DSC09414.jpg',
+      'drive:9 16th Birthday/DSC09403.jpg',
+      'drive:9 16th Birthday/DSC00193.jpg',
+      'drive:9 16th Birthday/DSC09625.jpg',
+      'drive:9 16th Birthday/DSC09621.jpg',
+      'drive:9 16th Birthday/DSC00074.jpg',
+      'drive:9 16th Birthday/DSC09376.jpg',
+      'drive:9 16th Birthday/DSC00066.jpg',
+      'drive:9 16th Birthday/DSC00161.jpg',
+      'drive:9 16th Birthday/DSC09746.jpg',
+      'drive:9 16th Birthday/DSC00055.jpg',
+      'drive:9 16th Birthday/DSC09369.jpg',
+    ],
+  },
+  ,
   {
     slug: 'housewarmings',
     title: 'Housewarmings',
@@ -188,6 +206,7 @@ const COLLECTIONS = [
       'drive:3 Housewarmings/DSC08950.jpg',
     ],
   },
+  ,
   {
     slug: 'seemantham',
     title: 'Seemantham',
@@ -234,34 +253,7 @@ const COLLECTIONS = [
       'drive:5 Baby Showers-Seemantham/DSC09998.jpg',
     ],
   },
-  {
-    slug: 'birthdays',
-    title: 'Birthdays',
-    blurb: 'First candles through sixteenth, cake smashes to full-scale parties.',
-    icon: 'cake',
-    src: [
-      'birthdays/2.jpg',
-      'birthdays/Main.jpg',
-      'birthdays/5.jpg',
-      'birthdays/1.jpg',
-      'birthdays/6.jpg',
-      'birthdays/3.jpg',
-      'drive:9 16th Birthday/DSC09879.jpg',
-      'drive:9 16th Birthday/DSC00077.jpg',
-      'drive:9 16th Birthday/DSC09414.jpg',
-      'drive:9 16th Birthday/DSC09403.jpg',
-      'drive:9 16th Birthday/DSC00193.jpg',
-      'drive:9 16th Birthday/DSC09625.jpg',
-      'drive:9 16th Birthday/DSC09621.jpg',
-      'drive:9 16th Birthday/DSC00074.jpg',
-      'drive:9 16th Birthday/DSC09376.jpg',
-      'drive:9 16th Birthday/DSC00066.jpg',
-      'drive:9 16th Birthday/DSC00161.jpg',
-      'drive:9 16th Birthday/DSC09746.jpg',
-      'drive:9 16th Birthday/DSC00055.jpg',
-      'drive:9 16th Birthday/DSC09369.jpg',
-    ],
-  },
+  ,
   {
     slug: 'half-saree',
     title: 'Half Saree',
@@ -276,6 +268,21 @@ const COLLECTIONS = [
       'half-saree/5.jpg',
     ],
   },
+  {
+    slug: 'weddings',
+    title: 'Weddings',
+    blurb: 'Muhurtham to mangalsutra, the whole day told the way it felt.',
+    icon: 'rings',
+    src: [
+      'main/2.jpeg',
+      'wedding/9.jpg',
+      'wedding/8.jpg',
+      'wedding/4.jpg',
+      'wedding/5.jpg',
+      'wedding/6.jpg',
+    ],
+  },
+  ,
   {
     slug: 'graduations',
     title: 'Graduations',
@@ -296,6 +303,7 @@ const COLLECTIONS = [
       '7 Graduation/1.jpg',
     ],
   },
+  ,
   {
     slug: 'matrimony',
     title: 'Matrimony Photoshoots',
@@ -316,6 +324,7 @@ const COLLECTIONS = [
       'drive:8 Matrimony Photoshoots/DSC09329.jpg',
     ],
   },
+  ,
   {
     slug: 'family-portraits',
     title: 'Family Portraits',
@@ -418,4 +427,8 @@ async function main() {
   console.log(`\nWrote ${MANIFEST}`)
 }
 
-main()
+// Only run when invoked directly. main() clears the output directory, so a
+// stray `import` of this module would delete every rendition.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main()
+}
