@@ -2,10 +2,8 @@ import { useRef, useState } from 'react'
 import { SectionHeading } from './SectionHeading'
 import { FilmCard } from './FilmCard'
 import { FilmModal } from './FilmModal'
-import { ArrowRight } from './icons'
 import { useGSAP } from '../hooks/useGSAP'
 import { gsap, ease, prefersReducedMotion } from '../lib/gsap'
-import { paths } from '../lib/paths'
 import { featuredFilms, type Film } from '../data/videos'
 
 export function FeaturedFilms() {
@@ -29,23 +27,12 @@ export function FeaturedFilms() {
 
   return (
     <section ref={root} id="films" className="edge relative bg-gradient-to-b from-transparent via-linen/50 to-transparent py-20 sm:py-28">
-      <SectionHeading
-        eyebrow="Featured Videos"
-        title="Watch Our Stories"
-        action={
-          <a
-            href={paths.videos}
-            className="group inline-flex items-center gap-2 text-sm font-medium text-ember transition-colors hover:text-vermilion"
-          >
-            View all videos
-            <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1.5" />
-          </a>
-        }
-      />
+      {/* The "View all videos" link is held back until the full catalogue is ready. */}
+      <SectionHeading eyebrow="Featured Videos" title="Watch Our Stories" />
 
       <div
         data-film-grid
-        className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 xs:grid-cols-2 lg:grid-cols-4"
+        className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 xs:grid-cols-2 lg:grid-cols-3"
       >
         {featuredFilms.map((film) => (
           <div data-film-card key={film.id}>
