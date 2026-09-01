@@ -1,4 +1,5 @@
 import galleryJson from './gallery.json'
+import { asset } from '../lib/paths'
 
 export type Photo = {
   src: string
@@ -19,10 +20,26 @@ export type Collection = {
 
 const manifest = galleryJson as { collections: Collection[]; hero: Photo[] }
 
-export const collections = manifest.collections
+/** The manifest stores root-absolute paths; rebase them for sub-path deploys. */
+const rebase = (photo: Photo): Photo => ({
+  ...photo,
+  src: asset(photo.src),
+  srcset: photo.srcset
+    .split(',')
+    .map((entry) => {
+      const [url, width] = entry.trim().split(' ')
+      return `${asset(url)} ${width}`
+    })
+    .join(', '),
+})
+
+export const collections = manifest.collections.map((c) => ({
+  ...c,
+  photos: c.photos.map(rebase),
+}))
 
 /** Frames that ride the hero coverflow, in running order. */
-export const heroSlides = manifest.hero
+export const heroSlides = manifest.hero.map(rebase)
 
 /** Shorter labels for films in the featured strip. */
 export const filmDisplayTitles: Record<string, string> = {

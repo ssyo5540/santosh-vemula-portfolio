@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { useGSAP } from '../hooks/useGSAP'
 import { gsap, ease, prefersReducedMotion } from '../lib/gsap'
 import { brand } from '../data/site'
+import { asset } from '../lib/paths'
 
 /**
  * The wave used to be a page-coloured shape painted over the gradient. That
@@ -88,7 +89,7 @@ export function Footer() {
           className="mx-auto mt-12 flex max-w-5xl flex-col items-center text-center"
         >
           <span className="grid h-16 w-16 place-items-center rounded-full bg-white/95 shadow-lift">
-            <img src="/logo.png" alt="" width={512} height={512} className="h-11 w-11" />
+            <img src={asset("/logo.png")} alt="" width={512} height={512} className="h-11 w-11" />
           </span>
 
           <h2 className="headline mt-6 text-[clamp(1.8rem,4.6vw,3rem)] text-white">

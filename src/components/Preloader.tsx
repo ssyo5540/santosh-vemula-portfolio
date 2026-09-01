@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { brand } from '../data/site'
+import { asset } from '../lib/paths'
 
 const easeOut = [0.76, 0, 0.24, 1] as const
 
@@ -16,7 +17,7 @@ export function Preloader({ done }: { done: boolean }) {
         >
           <div className="flex flex-col items-center">
             <motion.img
-              src="/logo.png"
+              src={asset("/logo.png")}
               alt=""
               width={512}
               height={512}

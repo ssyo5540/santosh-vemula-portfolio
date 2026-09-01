@@ -1,4 +1,5 @@
 import { brand } from '../data/site'
+import { asset } from '../lib/paths'
 
 /**
  * The hero lockup: brand mark, the PIXEL STORIES logotype, and a rule-flanked
@@ -13,7 +14,7 @@ export function Wordmark({ className = '' }: { className?: string }) {
   return (
     <div className={`flex flex-col items-center ${className}`}>
       <img
-        src="/logo.png"
+        src={asset("/logo.png")}
         alt=""
         width={512}
         height={512}

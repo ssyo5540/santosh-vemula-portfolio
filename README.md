@@ -102,10 +102,37 @@ SOURCE_ROOT="/path/to/public_html" npm run assets
 
 ## Deploying
 
-The build is a static bundle in `dist/` (`index.html` plus `videos/index.html`). Any
-static host will do: Netlify, Vercel, Cloudflare Pages, S3. If you deploy to a GitHub
-Pages project path rather than a domain root, set `base: '/<repo-name>/'` in
-`vite.config.ts` first; the internal links pick that up automatically.
+The build is a static bundle in `dist/` (`index.html` plus `videos/index.html`), so
+any static host will do.
+
+**Hostinger, at santoshvemula.com/events:**
+
+```bash
+npm run build:events
+```
+
+Upload the *contents* of `dist/` into `public_html/events/`. Zipping the contents and
+extracting them in Hostinger's file manager beats uploading ~200 files by hand.
+
+**Root of a domain, or anywhere else:**
+
+```bash
+npm run build
+```
+
+Sub-path deploys need `VITE_BASE`, which sets Vite's `base` and, through
+`src/lib/paths.ts`, every runtime asset URL too. That second part matters: Vite
+rewrites asset references it can see statically, but the gallery manifest is JSON
+read at runtime, so its ~420 paths and the logo would otherwise stay root-absolute
+and 404 under a sub-path.
+
+`public/.htaccess` ships with the build: compression, a year on the content-hashed
+assets, a month on photos, and no-cache on HTML so a redeploy actually reaches
+returning visitors. It deliberately contains no SPA rewrite — both pages are real
+HTML files.
+
+If the sub-path ever changes, update `build:events` in `package.json` and the
+absolute `og:image` URLs in `index.html` and `videos/index.html`.
 
 ## Licences
 

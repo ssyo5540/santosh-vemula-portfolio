@@ -3,6 +3,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  // Root by default; `npm run build:events` sets /events/ for the Hostinger
+  // sub-path. Runtime asset paths follow it via src/lib/paths.ts.
+  base: process.env.VITE_BASE ?? '/',
   plugins: [react()],
   build: {
     target: 'es2020',

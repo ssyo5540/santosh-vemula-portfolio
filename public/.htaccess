@@ -1,0 +1,29 @@
+# Hostinger (Apache/LiteSpeed). Both pages are real HTML files, so there is no
+# SPA rewrite here on purpose — /events/ and /events/videos/ resolve directly.
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Filenames are content-hashed, so these can be cached hard.
+  <FilesMatch "\.(js|css|woff2)$">
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "public, immutable"
+  </FilesMatch>
+  # Photos are stable but not hashed; a month keeps repeat visits cheap.
+  <FilesMatch "\.(webp|jpg|jpeg|png|ico)$">
+    ExpiresDefault "access plus 1 month"
+    Header set Cache-Control "public"
+  </FilesMatch>
+  # HTML must revalidate or a deploy never reaches returning visitors.
+  <FilesMatch "\.html$">
+    ExpiresDefault "access plus 0 seconds"
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
